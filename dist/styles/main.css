@@ -848,6 +848,10 @@ span {
   border-radius: 8px 8px 8px 0px;
 }
 
+.button--primary {
+  border-radius: 8px 8px 8px 0px;
+}
+
 .button--circle {
   width: 48px;
   height: 48px;
@@ -927,7 +931,7 @@ span {
 }
 
 .title--l {
-  font-size: 48px;
+  font-size: 42px;
   line-height: 1.2em;
   margin-bottom: 32px;
   font-weight: 500;
@@ -1001,7 +1005,7 @@ span {
 }
 
 .accordion:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 
 .accordion-top {
@@ -1598,11 +1602,12 @@ span {
 
 .cons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .cons-item {
   display: flex;
+  flex-direction: column;
 }
 
 .cons-item:not(:last-child) {
@@ -1612,18 +1617,13 @@ span {
 .cons-icon {
   display: flex;
   flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-right: 12px;
-  background-color: #009482;
+  margin-bottom: 12px;
   border-radius: 50%;
 }
 
 .cons-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 54px;
+  height: 54px;
 }
 
 .cons-content {
@@ -1664,6 +1664,8 @@ span {
   margin-left: 8px;
 }
 
+/* stylelint-disable no-descending-specificity */
+
 /* stylelint-disable scss/percent-placeholder-pattern */
 
 .card {
@@ -1673,6 +1675,11 @@ span {
   overflow: hidden;
   border: 1px solid #D9D9D9;
   border-radius: 8px;
+}
+
+.card .card-content-holder .card-content-row-name,
+.card .card-content-holder .card-content-row-value {
+  background-color: #ffffff;
 }
 
 .card-link {
@@ -1745,6 +1752,7 @@ span {
 .card-content-row-name,
 .card-content-row-value {
   background-color: #ffffff;
+  line-height: 1.5em;
   z-index: 1;
 }
 
@@ -1871,9 +1879,13 @@ span {
   margin: 0;
 }
 
+.about-description + .about-description {
+  margin-top: 24px;
+}
+
 .about-video-holder {
   position: relative;
-  border-radius: 32px;
+  border-radius: 8px;
   overflow: hidden;
   padding-top: 56.25%;
   margin-bottom: 32px;
@@ -1919,6 +1931,14 @@ span {
 
 .info-lising-item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.info-title {
+  margin-bottom: 24px;
+}
+
+.info-description {
+  margin-bottom: 32px;
 }
 
 .info-lising-description {
@@ -1997,8 +2017,13 @@ span {
   padding-top: 75%;
 }
 
+.news-card-image-holder .card-image {
+  padding: 0;
+}
+
 .news-card-content {
   padding: 16px;
+  background-color: #ffffff;
 }
 
 .news-card-description {
@@ -2843,6 +2868,16 @@ span {
   object-fit: cover;
 }
 
+.product-slider-thumb {
+  border: 1px solid transparent;
+}
+
+.swiper-slide-thumb-active .product-slider-thumb {
+  overflow: hidden;
+  border: 1px solid #7daa30;
+  border-radius: 8px;
+}
+
 .product-slider-thumb-holder {
   margin-right: 24px;
 }
@@ -2888,8 +2923,8 @@ span {
 }
 
 .product-slider-button svg {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 .product-slider-button.swiper-button-prev {
@@ -3060,7 +3095,7 @@ span {
   bottom: 0;
   left: 0;
   height: 2px;
-  background-color: #161616;
+  background-color: #009482;
 }
 
 .product-about-content {
@@ -3073,7 +3108,7 @@ span {
 
 .lising-hero .hero-sponsors {
   background-color: #ffffff;
-  border-radius: 32px;
+  border-radius: 8px;
   padding: 24px;
   gap: 16px;
   margin-top: auto;
@@ -3081,6 +3116,7 @@ span {
 
 .lising-hero-wrapper {
   display: grid;
+  background-color: #ffffff;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
@@ -3088,7 +3124,7 @@ span {
 
 .lising-hero-headline {
   padding: 48px;
-  border-radius: 32px;
+  border-radius: 8px;
   background-color: #ffffff;
 }
 
@@ -3104,15 +3140,13 @@ span {
 .lising-hero-content {
   display: flex;
   flex-direction: column;
-  margin: 0 -16px;
 }
 
 .lising-hero-image-holder {
   flex: 1;
   position: relative;
   overflow: hidden;
-  border-radius: 32px;
-  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
   padding-top: 56.25%;
 }
 
@@ -3484,10 +3518,6 @@ span {
   .info-wrapper {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
-  }
-
-  .info-description {
-    margin-bottom: 24px;
   }
 
   .request {
@@ -3884,7 +3914,7 @@ span {
   }
 
   .lising-hero .hero-sponsors {
-    border-radius: 24px;
+    border-radius: 8px;
   }
 
   .lising-hero-wrapper {
@@ -3893,7 +3923,7 @@ span {
 
   .lising-hero-headline {
     padding: 24px;
-    border-radius: 24px;
+    border-radius: 8px;
   }
 
   .lising-title {
@@ -3904,7 +3934,6 @@ span {
   .lising-hero-image-holder {
     flex: auto;
     padding-top: 42.8571428571%;
-    border-radius: 24px;
   }
 
   .instruction-steps {
@@ -4006,6 +4035,11 @@ span {
 
   .featured-cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card .card-content-holder .card-content-row-name,
+  .card .card-content-holder .card-content-row-value {
+    font-size: 16px;
   }
 
   .card-content {
@@ -4265,7 +4299,6 @@ span {
 
   .lising-hero-image-holder {
     padding-top: 66.6666666667%;
-    border-radius: 16px;
   }
 
   .lising-advantages-title {

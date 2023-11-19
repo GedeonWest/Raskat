@@ -3,7 +3,7 @@
 
   .hero-sponsors {
     @include media-breakpoint-down(tablet) {
-      border-radius: 24px;
+      border-radius: 8px;
     }
 
     @include media-breakpoint-down(phone) {
@@ -12,7 +12,7 @@
     }
 
     background-color: $white;
-    border-radius: 32px;
+    border-radius: 8px;
     padding: 24px;
     gap: 16px;
     margin-top: auto;
@@ -29,6 +29,7 @@
   }
 
   display: grid;
+  background-color: $white;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
@@ -37,7 +38,7 @@
 .lising-hero-headline {
   @include media-breakpoint-down(tablet) {
     padding: 24px;
-    border-radius: 24px;
+    border-radius: 8px;
   }
 
   @include media-breakpoint-down(phone) {
@@ -45,7 +46,7 @@
   }
 
   padding: 48px;
-  border-radius: 32px;
+  border-radius: 8px;
   background-color: $white;
 }
 
@@ -66,26 +67,22 @@
 .lising-hero-content {
   display: flex;
   flex-direction: column;
-  margin: 0 -16px;
 }
 
 .lising-hero-image-holder {
   @include media-breakpoint-down(tablet) {
     flex: auto;
     padding-top: calc(100% / (7 / 3));
-    border-radius: 24px;
   }
 
   @include media-breakpoint-down(phone) {
     padding-top: calc(100% / (3 / 2));
-    border-radius: 16px;
   }
 
   flex: 1;
   position: relative;
   overflow: hidden;
-  border-radius: 32px;
-  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
   padding-top: calc(100% / (16 / 9));
 
   img {

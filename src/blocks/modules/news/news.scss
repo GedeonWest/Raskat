@@ -45,10 +45,15 @@
 .news-card-image-holder {
   overflow: hidden;
   padding-top: calc(100% / (4 / 3));
+
+  .card-image {
+    padding: 0;
+  }
 }
 
 .news-card-content {
   padding: 16px;
+  background-color: $white;
 }
 
 .news-card-description {

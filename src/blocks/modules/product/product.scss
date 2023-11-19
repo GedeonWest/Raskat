@@ -68,6 +68,16 @@
   }
 }
 
+.product-slider-thumb {
+  border: 1px solid transparent;
+
+  .swiper-slide-thumb-active & {
+    overflow: hidden;
+    border: 1px solid #7daa30;
+    border-radius: 8px;
+  }
+}
+
 .product-slider-thumb-holder {
   @include media-breakpoint-down(tablet) {
     margin-right: 0;
@@ -140,8 +150,8 @@
       height: 16px;
     }
 
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
   }
 
   &.swiper-button-prev {
@@ -397,7 +407,7 @@
       bottom: 0;
       left: 0;
       height: 2px;
-      background-color: $black;
+      background-color: $green;
     }
   }
 }

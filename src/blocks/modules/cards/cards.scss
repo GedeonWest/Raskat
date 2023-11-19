@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 /* stylelint-disable scss/percent-placeholder-pattern */
 .card {
   display: flex;
@@ -6,6 +7,16 @@
   overflow: hidden;
   border: 1px solid $gray-300;
   border-radius: 8px;
+
+  .card-content-holder {
+    .card-content-row-name, .card-content-row-value {
+      @include media-breakpoint-down(phone) {
+        font-size: 16px;
+      }
+
+      background-color: $white;
+    }
+  }
 }
 
 .card-link {
@@ -87,6 +98,7 @@
     }
 
     background-color: $white;
+    line-height: 1.5em;
     z-index: 1;
   }
 
