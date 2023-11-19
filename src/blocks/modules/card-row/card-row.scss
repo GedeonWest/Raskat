@@ -1,0 +1,213 @@
+.card-row {
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 8px 12px;
+    column-gap: 12px;
+  }
+
+  display: grid;
+  position: relative;
+  border: 1px solid $gray-300;
+  padding: 24px;
+  gap: 24px;
+  grid-template-columns: 126px 3.3fr 1fr;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.card-row-link {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-row-image-holder {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 126px;
+  padding-top: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-row-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-row-content {
+  @include media-breakpoint-down(phone) {
+    padding-top: 8px;
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-row-title {
+  @include media-breakpoint-down(phone) {
+    font-size: 14px;
+  }
+
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  color: $black-400;
+  margin-bottom: 8px;
+}
+
+.card-row-labels {
+  @include media-breakpoint-down(phone) {
+    display: none;
+  }
+
+  display: flex;
+  margin-bottom: 16px;
+
+  .card-label {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .card-label--stock {
+    margin-left: 0;
+  }
+
+  &--mobile {
+    @include media-breakpoint-down(phone) {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      left: 8px;
+    }
+  }
+}
+
+.card-row-content-holder {
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card-row-content-item {
+  @include media-breakpoint-down(phone) {
+    justify-content: flex-start;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    @include media-breakpoint-down(phone) {
+      display: none;
+    }
+
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: url("../../../img/dots.svg");
+    background-repeat: repeat;
+  }
+
+  &-name, &-value {
+    @include media-breakpoint-down(phone) {
+      font-size: 12px;
+    }
+
+    background-color: $white;
+    z-index: 1;
+    font-size: 14px;
+  }
+
+  &-name {
+    color: $gray;
+    padding-right: 8px;
+  }
+
+  &-value {
+    padding-left: 8px;
+  }
+}
+
+.card-row-content-right {
+  @include media-breakpoint-down(phone) {
+    flex-wrap: wrap;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card-row-price-holder {
+  @include media-breakpoint-down(phone) {
+    margin-bottom: 0;
+  }
+
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.card-row-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: $black-400;
+  margin-right: 8px;
+
+  &--empty {
+    color: $gray-600;
+  }
+}
+
+.card-row-price-remark {
+  font-size: 13px;
+  font-weight: 400;
+  color: $gray;
+}
+
+.card-row-badge {
+  border-radius: 100px;
+  padding: 4px 8px;
+  background-color: $gray-300;
+  font-size: 13px;
+  color: $black-400;
+}
+
+.card-row-button {
+  @include media-breakpoint-down(phone) {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  margin-top: 16px;
+}

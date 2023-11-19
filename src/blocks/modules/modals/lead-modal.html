@@ -1,0 +1,89 @@
+<div class="modal" data-name="lead" id="modal-lead" aria-hidden="true">
+  <div class="modal-background" data-custom-close="" tabindex="-1"></div>
+  <div class="modal-closer" data-custom-close="" aria-label="Close modal">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M6.34277 17.6569L17.6565 6.34315"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M17.6565 17.6568L6.34277 6.34314"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  <div
+    class="modal-container"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-login-title"
+  >
+    <div class="modal-content" id="modal-call-content">
+      <span class="title title--sm modal-title" id="modal-call-title"
+        >Оставьте заявку</span
+      >
+
+      <p>
+        Оставьте свой номер телефона — наш менеджер свяжется с вами в ближайшее
+        время
+      </p>
+
+      <form action="post" class="form modal-form js-form">
+        <div class="form-field">
+          <label for="" class="form-field-label">
+            <input
+              type="text"
+              name="name"
+              class="form-field-input js-form-field"
+              placeholder="Имя"
+            />
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="" class="form-field-label">
+            <input
+              type="tel"
+              name="phone"
+              class="form-field-input js-form-field"
+              placeholder="Телефон"
+            />
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="" class="form-field-label">
+            <input
+              type="email"
+              name="email"
+              class="form-field-input js-form-field"
+              placeholder="Email"
+            />
+          </label>
+        </div>
+
+        <button type="submit" class="button button--black js-submit-button">
+          Отправить
+        </button>
+
+        <p class="form-policy">
+          Нажимая на кнопку, вы соглашаетесь с
+          <a href="#">политикой конфиденциальности</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

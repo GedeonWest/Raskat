@@ -1,0 +1,16 @@
+.container {
+  padding: 48px;
+
+  &--decorated {
+    background-color: $white;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(tablet) {
+      margin: 0 -16px;
+    }
+  }
+
+  @include media-breakpoint-down(tablet) {
+    padding: 24px;
+  }
+}

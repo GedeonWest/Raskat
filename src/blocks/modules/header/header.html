@@ -1,0 +1,55 @@
+<header class="header">
+  <div class="header-wrapper">
+    <a href="/" class="header-logo">
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#logo"></use>
+      </svg>
+    </a>
+
+    <nav class="header-navigation">
+      <ul class="header-navigation-list">
+        <li class="header-navigation-item">
+          <a href="/catalog.html" class="link header-link">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#catalog"></use>
+            </svg>
+            Каталог</a
+          >
+        </li>
+        <li class="header-navigation-item">
+          <a href="/lising.html" class="link header-link">Где купить?</a>
+        </li>
+        <li class="header-navigation-item">
+          <a href="/lising.html" class="link header-link">Поддержка</a>
+        </li>
+        <li class="header-navigation-item">
+          <a href="/sertificates.html" class="link header-link">Сертификаты</a>
+        </li>
+        <li class="header-navigation-item">
+          <a href="/news.html" class="link header-link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-contacts">
+      <a href="tel:+74952077557" class="link header-contacts-tel"
+        >+7 495 207-75-57</a
+      >
+
+      <a
+        class="button header-contacts-button"
+        data-micromodal-trigger="modal-call"
+      >
+        Заказать звонок
+      </a>
+
+      <button type="button" class="header-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+@@include("./header-mobile.html")

@@ -1,0 +1,38 @@
+.section {
+  padding: 0 $desktop-gap;
+  max-width: 1440px;
+  width: 100%;
+
+  & + & {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(desktop) {
+      margin-top: 64px;
+    }
+
+    @include media-breakpoint-down(tablet) {
+      margin-top: 40px;
+    }
+  }
+
+  &--fullsize {
+    padding: 0;
+  }
+
+  @include media-breakpoint-down(desktop) {
+    padding: 0 $tablet-gap;
+  }
+
+  @include media-breakpoint-down(desktop) {
+    padding: 0 16px;
+  }
+}
+
+.middle-wrapper {
+  max-width: 60%;
+  margin: 0 auto;
+
+  @include media-breakpoint-down(desktop) {
+    max-width: 100%;
+  }
+}

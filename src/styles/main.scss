@@ -1,0 +1,36 @@
+// Переменные, миксины, функции
+@import "helpers/variables";
+@import "helpers/colors";
+@import "helpers/project-media";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "helpers/typography";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+@import "base/links";
+@import "base/button";
+@import "base/section";
+@import "base/container";
+@import "base/title";
+@import "base/description";
+@import "base/list";
+@import "base/accordion";
+@import "base/form";
+@import "base/checkbox";
+@import "base/range";
+@import "base/toggle-switcher";
+@import "base/body";
+@import "base/slider";
+@import "base/editor";
+
+// БЭМ-блоки
+@import "../blocks/modules";
+
+
+@import "base/desktop-hidden";
+@import "base/tabs";

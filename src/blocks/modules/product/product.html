@@ -1,0 +1,28 @@
+<section class="section product">
+  <ul class="list breadcrumbs">
+    <li class="breadcrumbs-item">
+      <a href="/" class="link breadcrumbs-link">Главная</a>
+    </li>
+    <li class="breadcrumbs-item">
+      <a href="/catalog.html" class="link breadcrumbs-link">Каталог</a>
+    </li>
+    <li class="breadcrumbs-item">
+      <a href="/" class="link breadcrumbs-link">MicroBT M50S++ 154 TH/s</a>
+    </li>
+  </ul>
+
+  @@include("./product-card.html") @@include("./product-tabs.html")
+
+  <h2 class="title title--l">Похожие товары</h2>
+  <div class="featured-cards">
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+  </div>
+
+  <a href="/catalog.html" class="button featured-button">
+    Перейти в каталог
+    <svg class="icon-arrow">
+      <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+    </svg>
+  </a>
+</section>

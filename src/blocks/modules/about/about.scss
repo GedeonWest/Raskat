@@ -1,0 +1,49 @@
+.about-wrapper {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.about-title {
+  @include media-breakpoint-down(tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.about-description {
+  margin: 0;
+}
+
+.about-video-holder {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  padding-top: calc(100% / (16 / 9));
+  margin-bottom: 32px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-cons {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 16px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 48px;
+}

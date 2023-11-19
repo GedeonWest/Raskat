@@ -1,0 +1,65 @@
+.title {
+  font-size: 40px;
+  color: $black;
+  font-weight: 600;
+  line-height: 1.2em;
+
+  &--xxl {
+    font-size: 64px;
+    line-height: 1.1em;
+  }
+
+  &--xl {
+    font-size: 60px;
+    line-height: 1.1em;
+
+
+    @include media-breakpoint-down(tablet) {
+      font-size: 32px;
+    }
+  }
+
+  &--l {
+    font-size: 48px;
+    line-height: 1.2em;
+    margin-bottom: 32px;
+    font-weight: 500;
+
+    @include media-breakpoint-down(tablet) {
+      font-size: 24px;
+      line-height: 1.3em;
+    }
+  }
+
+  &--sm {
+    font-size: 32px;
+    line-height: 1.1em;
+    font-weight: 500;
+
+    @include media-breakpoint-down(tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &--xs {
+    font-size: 24px;
+    line-height: 1.3em;
+  }
+
+  &--xxs {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3em;
+  }
+}
+
+.title-holder {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  .title {
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+}

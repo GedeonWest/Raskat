@@ -1,0 +1,26 @@
+.editor {
+  h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    margin: 0 0 8px;
+  }
+
+  ul, ol {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  li {
+    &::marker {
+      display: inline-block;
+      padding-left: 20px;
+    }
+  }
+
+  p {
+    margin: 0 0 8px;
+  }
+}

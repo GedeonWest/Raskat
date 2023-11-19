@@ -1,0 +1,192 @@
+<div class="filter catalog-filter catalog-filter-mobile" id="filterHolder">
+  <form action="GET" class="js-filter catalog-filter-form">
+    <div class="catalog-filter-head">
+      <div class="catalog-filter-top">
+        <span class="catalog-filter-name">Фильтр</span>
+        <button type="button" class="close js-filter-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M6.34375 17.6569L17.6575 6.34315"
+              stroke="#161616"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17.6575 17.6568L6.34375 6.34314"
+              stroke="#161616"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="catalog-filter-block">
+      <div class="catalog-filter-sort">
+        <span>Сортировать</span>
+      </div>
+    </div>
+    <div class="catalog-filter-block">
+      <span class="catalog-filter-title">Цена</span>
+      <div class="range-holder">
+        <input type="number" value="" name="priceFrom" class="range-input" />
+        <input type="number" value="" name="priceTo" class="range-input" />
+        <span class="range-count range-min"></span>
+        <span class="range-count range-max"></span>
+        <div class="range js-range" data-min="0" data-max="1000000"></div>
+      </div>
+    </div>
+
+    <div class="catalog-filter-block js-accordion">
+      <div class="catalog-filter-title-holder">
+        <span class="catalog-filter-title">Производитель</span>
+        <button type="button" class="catalog-filter-button js-accordion-holder">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <fieldset
+        class="catalog-filter-fields read-more-content js-accordion-content"
+      >
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="chilkoot"
+            type="checkbox"
+            id="filterChilkoot"
+          />
+          <span class="checkbox-text">Chilkoot</span>
+        </label>
+
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="bitmain"
+            type="checkbox"
+            id="filterBitmain"
+          />
+          <span class="checkbox-text">Bitmain</span>
+        </label>
+
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="microBt"
+            type="checkbox"
+            id="filterMicroBt"
+          />
+          <span class="checkbox-text">MicroBt</span>
+        </label>
+
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="avalon"
+            type="checkbox"
+            id="filterAvalon"
+          />
+          <span class="checkbox-text">Avalon</span>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="catalog-filter-block js-accordion">
+      <div class="catalog-filter-title-holder">
+        <span class="catalog-filter-title">Алгоритм</span>
+        <button type="button" class="catalog-filter-button js-accordion-holder">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <fieldset
+        class="catalog-filter-fields read-more-content js-accordion-content"
+      >
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="scrypt"
+            type="checkbox"
+            id="algorytmScrypt"
+          />
+          <span class="checkbox-text">Scrypt</span>
+        </label>
+
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="sha-256"
+            type="checkbox"
+            id="algorytmSHA-256"
+          />
+          <span class="checkbox-text">SHA-256</span>
+        </label>
+
+        <label class="catalog-filter-checkbox checkbox">
+          <input
+            class="checkbox-input"
+            name="ethash"
+            type="checkbox"
+            id="algorytmEthash"
+          />
+          <span class="checkbox-text">Ethash</span>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="catalog-filter-block">
+      <span class="catalog-filter-title">Энергопотребление (Вт)</span>
+      <div class="range-holder">
+        <input type="number" value="" name="energyFrom" class="range-input" />
+        <input type="number" value="" name="energyTo" class="range-input" />
+        <span class="range-count range-min"></span>
+        <span class="range-count range-max"></span>
+        <div class="range js-range" data-min="300" data-max="1000000"></div>
+      </div>
+    </div>
+
+    <div class="catalog-filter-block">
+      <span class="catalog-filter-title">Хешрейт</span>
+      <div class="range-holder">
+        <input type="number" value="" name="energyFrom" class="range-input" />
+        <input type="number" value="" name="energyTo" class="range-input" />
+        <span class="range-count range-min"></span>
+        <span class="range-count range-max"></span>
+        <div class="range js-range" data-min="1" data-max="9500"></div>
+      </div>
+    </div>
+
+    <div class="catalog-filter-block">
+      <label class="toggle-switcher">
+        В наличии
+        <input class="toggle-switcher__input" type="checkbox" name="inStock" />
+        <span class="toggle-switcher__slider"></span>
+      </label>
+    </div>
+
+    <div class="catalog-filter-block">
+      <label class="toggle-switcher">
+        Доступно в лизинг
+        <input class="toggle-switcher__input" type="checkbox" name="isLising" />
+        <span class="toggle-switcher__slider"></span>
+      </label>
+    </div>
+
+    <div class="catalog-filter-buttons">
+      <button class="button button--black" type="submit">
+        Применить фильтры
+      </button>
+
+      <button class="catalog-filter-reset">Сбросить</button>
+    </div>
+  </form>
+</div>

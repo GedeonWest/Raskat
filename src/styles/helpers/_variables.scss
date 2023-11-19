@@ -1,0 +1,34 @@
+$desktop-gap: 60px;
+$tablet-gap: 24px;
+$mobile-gap: 16px;
+
+$transition: 0.3s ease;
+
+$fontFamily: 'Inter', sans-serif;
+
+$fontVariants: (
+  regular: regular,
+  500: semibold,
+  bold: bold,
+  italic: italic,
+  bolditalic: bolditalic,
+);
+
+$fontFormats: (
+  eot: embedded-opentype,
+  woff2: woff2,
+  woff: woff,
+  ttf: truetype,
+);
+
+%u-visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+}

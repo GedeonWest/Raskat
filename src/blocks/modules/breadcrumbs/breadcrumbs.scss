@@ -1,0 +1,41 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.breadcrumbs-item {
+  @include media-breakpoint-down(phone) {
+    margin-bottom: 8px;
+  }
+
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    a {
+      color: $black-400;
+    }
+
+    &::after {
+      @include pseudo;
+
+      top: -2px;
+      right: -22px;
+      width: 16px;
+      height: 24px;
+      background-image: url("../../../img/arrow-r.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &:last-child {
+    a {
+      color: $gray;
+      pointer-events: none;
+    }
+  }
+}

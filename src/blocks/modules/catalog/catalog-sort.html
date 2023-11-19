@@ -1,0 +1,68 @@
+<div class="catalog-sort">
+  <button type="button" class="catalog-sort-filters js-filter-toggler">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#filters"></use>
+    </svg>
+
+    Фильтр
+
+    <span class="catalog-sort-filters-count">2</span>
+  </button>
+  <div class="catalog-sort-wrapper">
+    <button
+      type="button"
+      class="sort-button catalog-sort-button catalog-sort-button--active"
+      data-active="true"
+      data-label="popularity"
+    >
+      По популярности
+    </button>
+    <button
+      type="button"
+      class="sort-button catalog-sort-button"
+      data-active="false"
+      data-label="payback"
+    >
+      По окупаемости
+    </button>
+    <button
+      type="button"
+      class="sort-button catalog-sort-button"
+      data-active="false"
+      data-label="cheap"
+    >
+      Сначала дешевле
+    </button>
+    <button
+      type="button"
+      class="sort-button catalog-sort-button"
+      data-active="false"
+      data-label="expensive"
+    >
+      Сначала дороже
+    </button>
+  </div>
+
+  <div class="catalog-sort-layouts js-tabs">
+    <button
+      type="button"
+      data-name="view-tiles"
+      class="js-tabs-block__tab layout-button tabs-block__tab tabs-block__tab--active"
+      aria-label="Плитка"
+    >
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#catalog-2"></use>
+      </svg>
+    </button>
+    <button
+      type="button"
+      data-name="view-list"
+      class="js-tabs-block__tab layout-button tabs-block__tab"
+      aria-label="Список"
+    >
+      <svg>
+        <use xlink:href="img/sprites/sprite.svg#row-vertical"></use>
+      </svg>
+    </button>
+  </div>
+</div>

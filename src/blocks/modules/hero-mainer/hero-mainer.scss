@@ -1,0 +1,23 @@
+.hero-mainer {
+  @include media-breakpoint-down(tablet) {
+    margin-bottom: 16px;
+  }
+
+  margin-bottom: 48px;
+}
+
+.cooler {
+  animation: loading-cooler 1s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes loading-cooler {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

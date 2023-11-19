@@ -1,0 +1,7 @@
+.desktop-hidden {
+  display: none;
+
+  @include media-breakpoint-down(tablet) {
+    display: flex;
+  }
+}

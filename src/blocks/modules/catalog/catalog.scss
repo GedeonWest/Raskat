@@ -1,0 +1,393 @@
+.catalog-count {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: $gray;
+}
+
+.catalog-wrapper {
+  @include media-breakpoint-down(desktop) {
+    grid-template-columns: 1fr;
+  }
+
+  display: grid;
+  grid-template-columns: 312px 1fr;
+  gap: 24px;
+}
+
+// Фильтр
+
+.catalog-filter {
+  @include media-breakpoint-down(desktop) {
+    display: none;
+  }
+
+  height: fit-content;
+}
+
+.catalog-filter-mobile {
+  @include media-breakpoint-down(desktop) {
+    display: block;
+  }
+
+  @include media-breakpoint-down(phone) {
+    width: 100%;
+  }
+
+  display: none;
+  position: fixed;
+  z-index: 102;
+  top: 0;
+  right: 0;
+  min-width: 360px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: $white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+
+  &--open {
+    display: block;
+    transform: translateX(0);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @extend %catalog-filter-mobile;
+}
+
+.catalog-filter-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 8px;
+  background-color: $white;
+  padding: 24px 16px;
+
+  %catalog-filter-mobile & {
+    height: 100vh;
+    padding: 0 16px;
+    border-radius: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.catalog-filter-head {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 -16px;
+  padding: 16px;
+  background-color: $gray-200;
+  margin-bottom: 24px;
+}
+
+.catalog-filter-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-block {
+  padding-bottom: 16px;
+  border-bottom: 1px solid $gray-300;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.catalog-filter-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.catalog-filter-fields {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  border: 0;
+  padding: 0;
+}
+
+.catalog-filter-title-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .catalog-filter-title {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-filter-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg);
+
+    use {
+      stroke: $black-400;
+    }
+  }
+}
+
+.catalog-filter-reset {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  margin-top: 16px;
+  font-weight: 500;
+  color: $black-400;
+  cursor: pointer;
+}
+
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+  margin: 0 -16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 25%);
+  background-color: #f6f6f6;
+}
+
+// Список
+
+.catalog-list-wrapper {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(phone) {
+    gap: 8px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+
+  &--list {
+    @include media-breakpoint-down(tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    grid-template-columns: 1fr;
+  }
+}
+
+// Сортировка
+
+.catalog-sort {
+  @include media-breakpoint-down(phone) {
+    padding: 8px 16px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  background-color: $white;
+  border-radius: 8px;
+  margin-bottom: 24px;
+
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+.catalog-sort-wrapper {
+  @include media-breakpoint-down(desktop) {
+    display: none;
+  }
+
+  display: flex;
+  align-items: center;
+}
+
+.catalog-sort-filters {
+  @include media-breakpoint-down(desktop) {
+    display: flex;
+    align-items: center;
+  }
+
+  display: none;
+  background-color: none;
+  border: 0;
+  padding: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+  }
+}
+
+.catalog-sort-button {
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: $gray;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &--active {
+    color: $black-400;
+  }
+}
+
+.catalog-sort-layouts {
+  display: flex;
+  align-items: center;
+}
+
+.layout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:first-child {
+    margin-right: 16px;
+  }
+}
+
+.catalog-sort-filters-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0 4px;
+  border-radius: 100%;
+  background-color: $green;
+  font-size: 12px;
+  margin-left: 12px;
+  font-weight: 600;
+}
+
+// Пагинация
+
+.pagination {
+  @include media-breakpoint-down(phone) {
+    width: auto;
+    margin: 24px -16px 0;
+  }
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: $white;
+  overflow: hidden;
+
+  &--current {
+    @extend %pagination-item-current;
+
+    background-color: $black-400;
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:first-child {
+    @extend %pagination-item-first;
+  }
+}
+
+.pagination-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: $black-400;
+  font-size: 16px;
+  font-weight: 500;
+
+  %pagination-item-current & {
+    color: $white;
+  }
+
+  %pagination-item-first & {
+    pointer-events: none;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    use {
+      stroke: $black-400;
+      transition: stroke 0.3s ease;
+
+      %pagination-item-first & {
+        stroke: $gray-300;
+      }
+
+      %pagination-item-current & {
+        stroke: $white;
+      }
+    }
+
+    %pagination-item-first & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $black;
+    color: $white;
+
+    use {
+      stroke: $white;
+    }
+  }
+}

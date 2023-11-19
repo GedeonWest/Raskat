@@ -1,0 +1,31 @@
+<div class="catalog-list">
+  @@include("./catalog-sort.html")
+
+  <div
+    class="catalog-list-wrapper js-tab-content tab-content tab-content--active"
+    data-name="view-tiles"
+  >
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+    @@include("../cards/card-1.html") @@include("../cards/card-1.html")
+  </div>
+
+  <div
+    class="catalog-list-wrapper catalog-list-wrapper--list js-tab-content tab-content"
+    data-name="view-list"
+  >
+    @@include("../card-row/card-row.html")
+    @@include("../card-row/card-row-2.html")
+    @@include("../card-row/card-row.html")
+    @@include("../card-row/card-row-2.html")
+    @@include("../card-row/card-row.html")
+    @@include("../card-row/card-row-2.html")
+  </div>
+
+  <button class="button button--full">Показать еще</button>
+
+  @@include("./catalog-pagination.html")
+</div>

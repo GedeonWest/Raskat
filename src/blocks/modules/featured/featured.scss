@@ -1,0 +1,30 @@
+.featured-cards {
+  @include media-breakpoint-down(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.featured-button {
+  text-decoration: none;
+  border-radius: 8px 8px 8px 0;
+}
+
+.icon-arrow {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}

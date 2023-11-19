@@ -1,0 +1,262 @@
+/* stylelint-disable scss/percent-placeholder-pattern */
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $gray-300;
+  border-radius: 8px;
+}
+
+.card-link {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image-holder {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 100%;
+  background-color: $white;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 26px;
+}
+
+.card-content {
+  @include media-breakpoint-down(phone) {
+    padding: 8px;
+  }
+
+  padding: 16px;
+  background-color: $white;
+}
+
+.card-title {
+  @include media-breakpoint-down(phone) {
+    font-size: 14px;
+  }
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.card-content-holder {
+  margin-bottom: 12px;
+}
+
+.card-content-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: url("../../../img/dots.svg");
+    background-repeat: repeat;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &-name, &-value {
+    @include media-breakpoint-down(phone) {
+      font-size: 12px;
+    }
+
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &-name {
+    color: $gray;
+    padding-right: 8px;
+  }
+
+  &-value {
+    padding-left: 8px;
+  }
+}
+
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-badge {
+  @include media-breakpoint-down(phone) {
+    font-size: 12px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  background-color: $gray-300;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4em;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.card-content-bottom {
+  @include media-breakpoint-down(phone) {
+    margin-top: 12px;
+  }
+
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.card-price-holder {
+  @include media-breakpoint-down(phone) {
+    margin-bottom: 8px;
+  }
+
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.card-price {
+  @include media-breakpoint-down(phone) {
+    font-size: 16px;
+  }
+
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin-right: 8px;
+}
+
+.card-price-remark {
+  @include media-breakpoint-down(phone) {
+    font-size: 12px;
+  }
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: $gray;
+}
+
+.card-button {
+  @include media-breakpoint-down(phone) {
+    font-size: 14px;
+  }
+
+  width: 100%;
+}
+
+.card-labels {
+  @include media-breakpoint-down(phone) {
+    top: 8px;
+    right: 8px;
+    left: 8px;
+  }
+
+  @include media-breakpoint-down(tablet) {
+    flex-wrap: wrap;
+  }
+
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+
+  &--row {
+    @extend %card-labels--row;
+  }
+}
+
+.card-label {
+  @include media-breakpoint-down(phone) {
+    font-size: 12px;
+  }
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 3px 8px;
+  border-radius: 100px;
+  font-size: 13px;
+
+  %card-labels--row & {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &--sale {
+    @include media-breakpoint-down(phone) {
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      font-size: 0;
+    }
+
+    background-color: $red;
+    color: $white;
+
+    svg {
+      @include media-breakpoint-down(phone) {
+        margin-right: 0;
+        width: 10px;
+        height: 10px;
+      }
+
+      width: 8px;
+      height: 8px;
+      margin-right: 4px;
+    }
+  }
+
+  &--stock {
+    margin-left: auto;
+    border: 1px solid $green;
+    background-color: $white;
+
+    svg {
+      width: 8px;
+      height: 8px;
+      margin-right: 4px;
+    }
+
+    %card-labels--row & {
+      margin-left: 0;
+    }
+  }
+
+  &--lising {
+    background-color: $gray-300;
+  }
+}

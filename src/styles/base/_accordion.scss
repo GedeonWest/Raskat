@@ -1,0 +1,72 @@
+.accordion {
+  border-radius: 24px;
+  background-color: $white;
+  padding: 16px 24px 0;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.js-accordion {
+  &--active {
+    @extend %accordion--active;
+  }
+}
+
+.accordion-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+
+  %accordion--active & {
+    border-bottom: 1px solid $gray-300;
+  }
+}
+
+.read-more-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 1px solid $black-400;
+  background-color: $white;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    border-radius: 100px;
+    background-color: $black-400;
+    transition: transform .3s ease;
+  }
+
+
+  &::before {
+    transform: rotate(90deg);
+
+    %accordion--active & {
+      transform: rotate(45deg);
+    }
+  }
+
+  &::after {
+    %accordion--active & {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.read-more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}

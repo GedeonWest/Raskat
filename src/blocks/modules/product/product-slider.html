@@ -1,0 +1,78 @@
+<div class="product-slider">
+  <div class="product-slider-thumb-holder">
+    <button class="swiper-button swiper-button-prev product-slider-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="8"
+        viewBox="0 0 16 8"
+        fill="none"
+      >
+        <path
+          d="M15 7L8.78095 1.66938C8.33156 1.2842 7.66844 1.2842 7.21905 1.66938L1 7"
+          stroke="#1E1E1E"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+    <div
+      class="swiper-container product-swiper-thumb"
+      data-direction="vertical"
+      data-direction-mobile="horizontal"
+      data-slides-per-view-desktop="5"
+      data-slides-per-view-wide="5"
+      data-slides-per-view="5"
+      data-slides-per-view-tablet="4"
+      data-slides-per-view-mobile="4"
+      data-gap="8"
+      data-thumb="product-swiper"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-thumb.html")</div>
+      </div>
+    </div>
+    <button class="swiper-button swiper-button-next product-slider-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="8"
+        viewBox="0 0 16 8"
+        fill="none"
+      >
+        <path
+          d="M1 0.999999L7.21905 6.33061C7.66844 6.7158 8.33156 6.7158 8.78095 6.33061L15 0.999999"
+          stroke="#1E1E1E"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="product-slider-main-holder">
+    <div
+      class="swiper-container product-swiper"
+      data-slides-per-view-desktop="1"
+      data-slides-per-view-wide="1"
+      data-slides-per-view="1"
+      data-slides-per-view-tablet="1"
+      data-slides-per-view-mobile="1"
+      data-gap="8"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+        <div class="swiper-slide">@@include("./product-slider-card.html")</div>
+      </div>
+    </div>
+  </div>
+</div>

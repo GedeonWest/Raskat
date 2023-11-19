@@ -1,0 +1,30 @@
+.range-holder {
+  position: relative;
+  padding: 16px 8px;
+  border-radius: 8px;
+  border: 1px solid $gray-300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range {
+  position: absolute;
+  right: 5px;
+  bottom: -1px;
+  left: 5px;
+}
+
+.range-value {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: $black-400;
+}
+
+.range-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 0;
+  pointer-events: none;
+}

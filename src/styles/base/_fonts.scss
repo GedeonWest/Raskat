@@ -1,0 +1,8 @@
+@include tx-font-face(
+  'IBMPlexSans',
+  inter,
+  $fontVariants,
+  $fontFormats,
+  true,
+  true
+);

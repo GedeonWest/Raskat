@@ -1,0 +1,19 @@
+.tabs-block__tab {
+  use {
+    stroke: $gray-400;
+  }
+
+  &--active {
+    use {
+      stroke: $black;
+    }
+  }
+}
+
+.tab-content {
+  display: none;
+
+  &--active {
+    display: grid;
+  }
+}

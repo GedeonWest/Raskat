@@ -1,0 +1,234 @@
+.lising-hero {
+  margin-top: 24px;
+
+  .hero-sponsors {
+    @include media-breakpoint-down(tablet) {
+      border-radius: 24px;
+    }
+
+    @include media-breakpoint-down(phone) {
+      padding: 16px;
+      gap: 8px;
+    }
+
+    background-color: $white;
+    border-radius: 32px;
+    padding: 24px;
+    gap: 16px;
+    margin-top: auto;
+  }
+}
+
+.lising-hero-wrapper {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include media-breakpoint-down(phone) {
+    margin-bottom: 24px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.lising-hero-headline {
+  @include media-breakpoint-down(tablet) {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  @include media-breakpoint-down(phone) {
+    margin: 0 -16px;
+  }
+
+  padding: 48px;
+  border-radius: 32px;
+  background-color: $white;
+}
+
+.lising-title {
+  @include media-breakpoint-down(tablet) {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  margin-bottom: 48px;
+}
+
+.lising-hero-description {
+  font-size: 20px;
+  margin: 0;
+}
+
+.lising-hero-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -16px;
+}
+
+.lising-hero-image-holder {
+  @include media-breakpoint-down(tablet) {
+    flex: auto;
+    padding-top: calc(100% / (7 / 3));
+    border-radius: 24px;
+  }
+
+  @include media-breakpoint-down(phone) {
+    padding-top: calc(100% / (3 / 2));
+    border-radius: 16px;
+  }
+
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  margin-bottom: 24px;
+  padding-top: calc(100% / (16 / 9));
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lising-advantages-title {
+  @include media-breakpoint-down(phone) {
+    max-width: 100%;
+  }
+
+  max-width: 50%;
+}
+
+.lising-advantages-list {
+  @include media-breakpoint-down(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 16px;
+}
+
+.lising-advantages-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid $green;
+  padding: 12px 16px;
+  border-radius: 32px;
+}
+
+.lising-advantages-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.lising-advantages-subtitle {
+  font-weight: 500;
+}
+
+.instruction-steps {
+  @include media-breakpoint-down(tablet) {
+    flex-direction: column;
+  }
+
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.instruction-step {
+  @include media-breakpoint-down(tablet) {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 16px;
+    align-items: flex-start;
+  }
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    @include media-breakpoint-down(tablet) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+    margin-right: 24px;
+  }
+}
+
+.instruction-top {
+  @include media-breakpoint-down(tablet) {
+    margin-right: 0;
+    margin-bottom: 0;
+    grid-row: 1 / span 2;
+  }
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.instruction-number {
+  @include media-breakpoint-down(tablet) {
+    margin-right: 0;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid $green;
+  border-radius: 100%;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3em;
+  color: $green;
+  margin-right: 24px;
+}
+
+.instruction-subtitle {
+  @include media-breakpoint-down(tablet) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.instruction-decor {
+  @include media-breakpoint-down(tablet) {
+    display: none;
+  }
+
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-image: url("../../../img/dark-dots.svg");
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.instruction-description {
+  @include media-breakpoint-down(tablet) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

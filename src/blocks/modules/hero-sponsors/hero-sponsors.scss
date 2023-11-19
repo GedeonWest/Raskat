@@ -1,0 +1,17 @@
+.hero-sponsors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hero-sponsors-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

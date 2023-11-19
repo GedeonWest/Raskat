@@ -1,0 +1,14 @@
+.news-feed {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
