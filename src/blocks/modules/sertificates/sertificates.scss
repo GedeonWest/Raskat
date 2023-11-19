@@ -1,0 +1,34 @@
+.sertificates-wrapper {
+  margin-bottom: 80px;
+}
+
+.sertificates-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sertificates-item {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.sertificates-item-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

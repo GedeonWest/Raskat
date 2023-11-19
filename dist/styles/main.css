@@ -3374,6 +3374,41 @@ span {
   margin-bottom: 8px;
 }
 
+.sertificates-wrapper {
+  margin-bottom: 80px;
+}
+
+.sertificates-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sertificates-item {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.sertificates-item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.sertificates-item:first-child {
+  padding-top: 0;
+}
+
+.sertificates-item-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+
+.sertificates-item-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
 .desktop-hidden {
   display: none;
 }
