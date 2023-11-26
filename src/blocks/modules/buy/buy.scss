@@ -1,0 +1,56 @@
+.buy-title {
+  margin-bottom: 24px;
+}
+
+.buy-description {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.buy-list {
+  @include media-breakpoint-down(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.buy-list-item {
+  @include media-breakpoint-down(phone) {
+    min-width: auto;
+    height: 80px;
+  }
+
+  position: relative;
+  min-width: 226px;
+  height: 120px;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.buy-item-image {
+  .buy-list-item:hover & {
+    opacity: 0;
+  }
+
+  &--color {
+    opacity: 0;
+
+    .buy-list-item:hover & {
+      opacity: 1;
+    }
+  }
+}
