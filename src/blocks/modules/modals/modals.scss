@@ -43,10 +43,15 @@
     padding: 24px 16px;
   }
 
+  z-index: 1002;
   width: 480px;
   padding: 32px;
   background-color: $white;
-  border-radius: 32px;
+  border-radius: 8px;
+
+  %page-dark & {
+    background-color: $black-300;
+  }
 }
 
 .modal-closer {
@@ -69,5 +74,9 @@
 .modal-title {
   @include media-breakpoint-down(phone) {
     font-size: 24px;
+  }
+
+  %page-dark & {
+    color: $white;
   }
 }

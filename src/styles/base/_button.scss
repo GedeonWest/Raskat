@@ -14,6 +14,11 @@
   text-decoration: none;
   transition: all .3s;
 
+  %page-dark & {
+    border-color: rgba($color: $white, $alpha: 0.2);
+    color: $white;
+  }
+
   &:hover {
     background-color: $dark;
     color: $white;

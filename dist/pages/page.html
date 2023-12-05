@@ -37,15 +37,10 @@
     <nav class="header-navigation">
       <ul class="header-navigation-list">
         <li class="header-navigation-item">
-          <a href="/catalog.html" class="link header-link">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#catalog"></use>
-            </svg>
-            Каталог</a
-          >
+          <span class="link header-link" id="catalogLink">Каталог</span>
         </li>
         <li class="header-navigation-item">
-          <a href="/lising.html" class="link header-link">Где купить?</a>
+          <a href="/buy.html" class="link header-link">Где купить?</a>
         </li>
         <li class="header-navigation-item">
           <a href="/service.html" class="link header-link">Поддержка</a>
@@ -86,7 +81,7 @@
       <a href="/catalog.html" class="link header-link"> Каталог</a>
     </li>
     <li class="header-navigation-item">
-      <a href="/catalog.html" class="link header-link"> Где купить?</a>
+      <a href="/buy.html" class="link header-link"> Где купить?</a>
     </li>
     <li class="header-navigation-item">
       <a href="/service.html" class="link header-link">Поддержка</a>
@@ -99,14 +94,6 @@
     </li>
   </div>
 
-  <a href="#" class="header-mobile-tg"
-    ><svg>
-      <use xlink:href="img/sprites/sprite.svg#tg"></use>
-    </svg>
-
-    Написать в Telegram
-  </a>
-
   <button
     type="button"
     class="button header-mobile-button"
@@ -114,6 +101,104 @@
   >
     Заказать звонок
   </button>
+</div>
+ <div class="header-catalog-menu" id="headerCatalog">
+  <div class="header-catalog-content">
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title"
+        >Системные блоки</a
+      >
+
+      <ul class="list header-catalog-list">
+        <li class="header-catalog-list-item">
+          <a href="/raskat-strike.html" class="link"
+            >Системные блоки Raskat Strike</a
+          >
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link"
+            >Системные блоки Raskat Standart</a
+          >
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мини ПК Raskat</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title">Моноблоки</a>
+
+      <ul class="list header-catalog-list">
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Моноблоки Studio 24"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Моноблоки Studio 27"</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title">Ноутбуки</a>
+
+      <ul class="list header-catalog-list">
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Ноутбуки Style 14"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Ноутбуки Style 15"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Ноутбуки Style 17"</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title">Мониторы</a>
+
+      <ul class="list header-catalog-list">
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мониторы 21"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мониторы 24"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мониторы 27"</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мониторы 32"</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title"
+        >Клавиатуры и мыши</a
+      >
+
+      <ul class="list header-catalog-list">
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Клавиатуры</a>
+        </li>
+        <li class="header-catalog-list-item">
+          <a href="/catalog.html" class="link">Мыши</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-catalog-item">
+      <a href="/catalog.html" class="link header-catalog-title"
+        >Источники бесперебойного питания</a
+      >
+
+      <a href="/catalog.html" class="link header-catalog-title"
+        >Аудио и аксессуары</a
+      >
+    </div>
+  </div>
 </div>
 
 
@@ -128,7 +213,7 @@
           <a href="/catalog.html" class="link">Каталог</a>
         </li>
         <li class="footer-nav-item">
-          <a href="#" class="link">Где купить?</a>
+          <a href="/buy.html" class="link">Где купить?</a>
         </li>
         <li class="footer-nav-item">
           <a href="/service.html" class="link">Поддержка</a>
@@ -236,7 +321,7 @@
           </label>
         </div>
 
-        <button type="submit" class="button button--black js-submit-button">
+        <button type="submit" class="button button--decorate js-submit-modal">
           Отправить
         </button>
 

@@ -17,6 +17,10 @@
 
     a {
       color: $black-400;
+
+      %page-dark & {
+        color: $white;
+      }
     }
 
     &::after {
@@ -36,6 +40,10 @@
     a {
       color: $gray;
       pointer-events: none;
+
+      %page-dark & {
+        color: $white;
+      }
     }
   }
 }

@@ -13,6 +13,11 @@
   grid-template-columns: 126px 3.3fr 1fr;
   border-radius: 8px;
   background-color: $white;
+
+  %page-dark & {
+    background-color: $black-300;
+    border: none;
+  }
 }
 
 .card-row-link {
@@ -63,6 +68,10 @@
   line-height: 130%;
   color: $black-400;
   margin-bottom: 8px;
+
+  %page-dark & {
+    color: $white;
+  }
 }
 
 .card-row-labels {
@@ -140,6 +149,10 @@
     background-color: $white;
     z-index: 1;
     font-size: 14px;
+
+    %page-dark & {
+      background-color: $black-300;
+    }
   }
 
   &-name {
@@ -210,4 +223,10 @@
   }
 
   margin-top: 16px;
+
+  %page-dark & {
+    background-color: transparent;
+    border: 1px solid $green-300;
+    border-radius: 8px 8px 8px 0;
+  }
 }

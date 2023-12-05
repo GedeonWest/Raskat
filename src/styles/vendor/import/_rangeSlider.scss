@@ -1,5 +1,26 @@
 .noUi-target {
   height: 2px;
+
+  &:active {
+
+    %page-dark & {
+      .noUi-handle {
+        background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
+  
+        &-lower {
+          background: #00D344;
+        }
+  
+        &-upper {
+          background: #009482;
+        }
+      }
+  
+      .noUi-connect {
+        background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
+      }
+    }
+  }
 }
 
 .noUi-base, .noUi-connects {
@@ -30,11 +51,22 @@
   -webkit-transform-style: preserve-3d;
   transform-origin: 0 0;
   transform-style: flat;
+
+  
 }
 
 .noUi-connect {
   background: $black-400;
   height: 100%;
+  cursor: grabbing;
+
+  %page-dark & {
+    background: #6D6D6D;
+
+    &:active {
+      background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
+    }
+  }
 }
 
 .noUi-handle {
@@ -46,4 +78,8 @@
   border-radius: 100%;
   background-color: $black-400;
   backface-visibility: hidden;
+
+  %page-dark & {
+    background: #6D6D6D;
+  }
 }

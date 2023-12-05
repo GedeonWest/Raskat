@@ -3,6 +3,7 @@
   text-decoration: none;
   color: $black;
   transition: all $transition;
+  cursor: pointer;
 
   &:hover {
     color: $green;
@@ -10,5 +11,13 @@
 
   &--active {
     color: $green;
+  }
+
+  %page-dark & {
+    color: $white;
+
+    &:hover {
+      color: $green-300;
+    }
   }
 }

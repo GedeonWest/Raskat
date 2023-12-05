@@ -35,11 +35,21 @@
     border-radius: 8px;
     border: 1px solid $gray-300;
 
+    %page-dark & {
+      background-color: $black-300;
+      border-color: rgba($color: $white, $alpha: 0.15);
+    }
+
     %checkbox__input:checked + & {
       background-color: $black-400;
       background-image: url('../../img/check.svg');
       background-size: 50% auto;
       border-color: $black-400;
+
+      %page-dark & {
+        background-color: $black-300;
+        border-color: rgba($color: $white, $alpha: 0.15);
+      }
     }
   }
 }

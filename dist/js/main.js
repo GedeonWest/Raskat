@@ -106,14 +106,22 @@ initSliders();
 var burger;
 var menu;
 var button;
+var catalogButton;
+var headerCatalog;
 var findElements = function findElements() {
   burger = document.querySelector(".header-burger");
   menu = document.querySelector(".header-mobile");
   button = document.querySelector(".header-mobile-button");
+  burger = document.querySelector(".header-burger");
+  headerCatalog = document.querySelector("#headerCatalog");
+  catalogButton = document.querySelector("#catalogLink");
 };
 var toggleBudy = function toggleBudy() {
   document.querySelector("body").classList.toggle("body--stuck");
   document.querySelector("body").classList.toggle("body--stuck--no-dark");
+};
+var toggleCatalogMenu = function toggleCatalogMenu() {
+  headerCatalog.classList.toggle("header-catalog-menu--active");
 };
 var onButtonClick = function onButtonClick() {
   toggleBudy();
@@ -129,6 +137,12 @@ var subscribe = function subscribe() {
   if (button) {
     button.addEventListener("click", function () {
       return onButtonClick();
+    });
+  }
+  if (catalogButton) {
+    console.log(catalogButton);
+    catalogButton.addEventListener("click", function () {
+      return toggleCatalogMenu();
     });
   }
 };
@@ -339,14 +353,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _range__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./range */ "./src/js/import/range/index.js");
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ "./src/js/import/tabs/index.js");
 /* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gallery */ "./src/js/import/gallery/index.js");
+/* harmony import */ var _showMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./showMore */ "./src/js/import/showMore/index.js");
 
 "./accordion/index";
+
 
 
 
 // import slider from "./sliders";
 
 (0,_accordion__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_showMore__WEBPACK_IMPORTED_MODULE_4__["default"])();
 (0,_range__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_gallery__WEBPACK_IMPORTED_MODULE_3__["default"])();
@@ -507,6 +524,110 @@ var subscribe = function subscribe(instance) {
   var object = instance;
   createSliders(object);
   setValues(object);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (node) {
+  var instance = {
+    node: node
+  };
+  var init = function init() {
+    findElements(instance);
+    subscribe(instance);
+  };
+  init();
+});
+
+/***/ }),
+
+/***/ "./src/js/import/showMore/index.js":
+/*!*****************************************!*\
+  !*** ./src/js/import/showMore/index.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _showMore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./showMore */ "./src/js/import/showMore/showMore.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
+var moreHolders;
+var shouldRun = function shouldRun() {
+  return document.querySelector(".js-more-holder");
+};
+var findElements = function findElements() {
+  moreHolders = _toConsumableArray(document.querySelectorAll(".js-more-holder"));
+};
+var subscribe = function subscribe() {
+  moreHolders.forEach(_showMore__WEBPACK_IMPORTED_MODULE_0__["default"]);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  if (!shouldRun()) {
+    console.log("fire");
+    return;
+  }
+  findElements();
+  subscribe();
+});
+
+/***/ }),
+
+/***/ "./src/js/import/showMore/showMore.js":
+/*!********************************************!*\
+  !*** ./src/js/import/showMore/showMore.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+var findElements = function findElements(object) {
+  var instance = object;
+  var node = instance.node;
+  var showMoreContent = node.querySelector(".js-more-content");
+  var showMoreHolder = _toConsumableArray(node.children).find(function (el) {
+    return el.classList.contains("js-more-trigger");
+  });
+  if (showMoreHolder) {
+    instance.button = showMoreHolder;
+  } else {
+    instance.button = node.querySelector(".js-more-trigger");
+  }
+  instance.content = showMoreContent;
+};
+var onButtonClick = function onButtonClick(object) {
+  var instance = object;
+  var node = instance.node,
+    content = instance.content;
+  node.classList.toggle("js-more--active");
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+};
+var subscribe = function subscribe(instance) {
+  var object = instance;
+  var button = object.button;
+  if (button) {
+    button.addEventListener("click", function () {
+      return onButtonClick(instance);
+    });
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (node) {
   var instance = {

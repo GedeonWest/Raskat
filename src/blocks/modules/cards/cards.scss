@@ -4,9 +4,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  height: fit-content;
   overflow: hidden;
   border: 1px solid $gray-300;
   border-radius: 8px;
+
+  %page-dark & {
+    border: none;
+  }
 
   .card-content-holder {
     .card-content-row-name, .card-content-row-value {
@@ -15,6 +20,10 @@
       }
 
       background-color: $white;
+
+      %page-dark & {
+        background-color: $black-300;
+      }
     }
   }
 }
@@ -34,6 +43,10 @@
   height: auto;
   padding-top: 100%;
   background-color: $white;
+
+  %page-dark & {
+    background-color: $black-300;
+  }
 }
 
 .card-image {
@@ -44,6 +57,10 @@
   height: 100%;
   object-fit: cover;
   padding: 26px;
+
+  %page-dark & {
+    padding: 0;
+  }
 }
 
 .card-content {
@@ -53,6 +70,10 @@
 
   padding: 16px;
   background-color: $white;
+
+  %page-dark & {
+    background-color: $black-300;
+  }
 }
 
 .card-title {
@@ -184,6 +205,13 @@
   }
 
   width: 100%;
+  border-radius: 8px 8px 8px 0;
+  background-color: $black-600;
+
+  %page-dark & {
+    background-color: transparent;
+    border: 1px solid $green-300;
+  }
 }
 
 .card-labels {
@@ -271,4 +299,33 @@
   &--lising {
     background-color: $gray-300;
   }
+}
+
+.js-more {
+  &--active {
+    .js-more-trigger {
+      display: none;
+    }
+  }
+}
+
+.js-more-trigger {
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+
+  svg {
+    margin-left: 12px;
+  }
+}
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern */
+.js-more-content {
+  max-height: 0;
+  overflow: hidden;
 }

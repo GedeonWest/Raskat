@@ -1,6 +1,10 @@
 .footer {
   background-color: $black;
   color: $white;
+
+  %page-dark & {
+    background-color: #000;
+  }
 }
 
 .footer-top {
@@ -43,6 +47,11 @@
     flex-direction: row;
   }
 
+  @include media-breakpoint-down(phone) {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
   margin-left: auto;
   margin-right: 24px;
   display: flex;
@@ -50,22 +59,12 @@
 }
 
 .footer-nav-item {
+  @include media-breakpoint-down(phone) {
+    width: fit-content;
+  }
+
   width: 200px;
   color: $white;
-
-  a {
-    display: inline-block;
-    color: $white;
-  }
-
-  &:not(:last-child) {
-    @include media-breakpoint-down(tablet) {
-      margin-bottom: 0;
-      margin-right: 16px;
-    }
-
-    margin-bottom: 16px;
-  }
 
   .footer-contacts & {
     &:not(:last-child) {
@@ -73,6 +72,25 @@
         margin-bottom: 16px;
       }
     }
+  }
+
+  a {
+    display: inline-block;
+    color: $white;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  &:not(:last-child) {
+    @include media-breakpoint-down(tablet) {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+
+    @include media-breakpoint-down(phone) {
+      margin-right: 0;
+    }
+
+    margin-bottom: 16px;
   }
 }
 

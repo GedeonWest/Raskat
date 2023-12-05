@@ -15,6 +15,12 @@
   gap: 24px;
 }
 
+.catalog-title {
+  %page-dark & {
+    color: $white;
+  }
+}
+
 // Фильтр
 
 .catalog-filter {
@@ -46,6 +52,10 @@
   transform: translateX(100%);
   transition: transform 0.3s ease-out;
 
+  %page-dark & {
+    background-color: $black-300;
+  }
+
   &--open {
     display: block;
     transform: translateX(0);
@@ -65,6 +75,10 @@
   border-radius: 8px;
   background-color: $white;
   padding: 24px 16px;
+
+  %page-dark & {
+    background-color: $black-300;
+  }
 
   %catalog-filter-mobile & {
     height: 100vh;
@@ -87,6 +101,10 @@
   padding: 16px;
   background-color: $gray-200;
   margin-bottom: 24px;
+
+  %page-dark & {
+    background: $black-300;
+  }
 }
 
 .catalog-filter-top {
@@ -100,6 +118,10 @@
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  %page-dark & {
+    border-color: rgba($color: $white, $alpha: 10%);
   }
 }
 
@@ -154,6 +176,10 @@
   font-weight: 500;
   color: $black-400;
   cursor: pointer;
+
+  %page-dark & {
+    color: $white;
+  }
 }
 
 .catalog-filter-buttons {
@@ -170,6 +196,18 @@
   padding: 16px;
   box-shadow: 0 4px 12px 0 rgb(0 0 0 / 25%);
   background-color: #f6f6f6;
+
+  %page-dark & {
+    background: $black-300;
+  }
+}
+
+.catalog-submit {
+  %page-dark & {
+    background-color: transparent;
+    border: 1px solid $green-300;
+    border-radius: 8px 8px 8px 0;
+  }
 }
 
 // Список
@@ -213,11 +251,19 @@
   border-radius: 8px;
   margin-bottom: 24px;
 
+  %page-dark & {
+    background-color: $black-300;
+  }
+
   button {
     background: transparent;
     border: 0;
     cursor: pointer;
     padding: 0;
+
+    %page-dark & {
+      color: $white;
+    }
   }
 }
 
@@ -291,7 +337,7 @@
   min-height: 18px;
   padding: 0 4px;
   border-radius: 100%;
-  background-color: $green;
+  background-color: $green-300;
   font-size: 12px;
   margin-left: 12px;
   font-weight: 600;
@@ -326,10 +372,20 @@
   background-color: $white;
   overflow: hidden;
 
+  %page-dark & {
+    background: transparent;
+    color: $white;
+    border: 1px solid rgba($color: $white, $alpha: 20%);
+  }
+
   &--current {
     @extend %pagination-item-current;
 
     background-color: $black-400;
+
+    %page-dark & {
+      background: linear-gradient(#00d344, #009482);
+    }
   }
 
   &:not(:last-child) {
@@ -372,6 +428,10 @@
       }
 
       %pagination-item-current & {
+        stroke: $white;
+      }
+
+      %page-dark & {
         stroke: $white;
       }
     }

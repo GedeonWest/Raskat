@@ -27,6 +27,12 @@
   border: 1px solid $gray-300;
   overflow: hidden;
 
+  %page-dark & {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba($color: $white, $alpha: 0.35);
+  }
+
   &:hover {
     border-color: $gray;
   }

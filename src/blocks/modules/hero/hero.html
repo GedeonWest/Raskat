@@ -1,44 +1,51 @@
 <section class="section hero">
-  <div class="container container--decorated hero-container">
-    <div class="hero-top">
-      <div class="hero-top-left">
-        <h1 class="title title--xl hero-title">
-          Оборудование для&nbsp;майнинга
-        </h1>
-        <ul class="hero-list">
-          <li class="hero-list-item">Оптом</li>
-          <li class="hero-list-item">Розница</li>
-          <li class="hero-list-item">Лизинг</li>
-        </ul>
-      </div>
-
-      <div class="hero-top-right">
-        <p class="description hero-description">
-          Официальный дистрибьютор оборудования для майнинга криптовалют на
-          территории РФ
-        </p>
-        <div class="hero-buttons hero-buttons--desktop">
-          <a href="/catalog.html" class="button button--black hero-button">
-            Перейти в каталог
-          </a>
-          <button type="button" class="button hero-button">
-            Получить прайс
-          </button>
+  <div class="contacts-slider">
+    <div
+      class="swiper-container contacts-swiper"
+      data-slides-per-view-desktop="1"
+      data-slides-per-view-wide="1"
+      data-slides-per-view="1"
+      data-slides-per-view-tablet="1"
+      data-slides-per-view-mobile="1"
+      data-gap="8"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="contacts-slider-content">
+            <span class="title title--l contacts-title"
+              >Разумный подход к сложным задачам</span
+            >
+            <a href="#" class="button">Перейти в каталог</a>
+          </div>
+          <div class="contacts-slider-image">
+            <img src="../../../img/banner-image.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="contacts-slider-content">
+            <span class="title title--l contacts-title"
+              >Разумный подход к сложным задачам</span
+            >
+            <a href="#" class="button">Перейти в каталог</a>
+          </div>
+          <div class="contacts-slider-image">
+            <img src="../../../img/banner-image.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="contacts-slider-content">
+            <span class="title title--l contacts-title"
+              >Разумный подход к сложным задачам</span
+            >
+            <a href="#" class="button">Перейти в каталог</a>
+          </div>
+          <div class="contacts-slider-image">
+            <img src="../../../img/banner-image.png" alt="" />
+          </div>
         </div>
       </div>
-
-      <div class="hero-buttons hero-buttons--mobile">
-        <a href="/catalog.html" class="button button--black hero-button">
-          Перейти в каталог
-        </a>
-        <button type="button" class="button hero-button">Получить прайс</button>
-      </div>
     </div>
 
-    <div class="hero-bottom">
-      @@include("../hero-mainer/hero-mainer.html")
-      @@include("../hero-sponsors/hero-sponsors.html")
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
-  @@include("../cons/cons.html")
 </section>

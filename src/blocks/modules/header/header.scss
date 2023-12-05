@@ -15,6 +15,15 @@
   padding: 16px $desktop-gap;
   border-bottom: 1px solid $gray-300;
   background-color: $gray-200;
+
+  %page-dark & {
+    background-color: transparent;
+    position: relative;
+  }
+
+  %page-dark.body--stuck & {
+    background-color: #000;
+  }
 }
 
 .header-wrapper {
@@ -39,6 +48,11 @@
 
     width: 190px;
     height: 40px;
+    color: #000;
+
+    %page-dark & {
+      color: $white;
+    }
   }
 }
 
@@ -103,6 +117,15 @@
   @include media-breakpoint-down(tablet) {
     display: none;
   }
+
+  %page-dark & {
+    color: $white;
+    border: double 4px transparent;
+    border-radius: 8px 8px 8px 0;
+    background-image: linear-gradient(#000, #000), radial-gradient(circle at top left, #00d344, #009482);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
 }
 
 .header-burger {
@@ -130,6 +153,10 @@
 
     &:not(:last-child) {
       margin-bottom: 4px;
+    }
+
+    %page-dark & {
+      background-color: $white;
     }
   }
 
@@ -172,6 +199,10 @@
     position: fixed;
     top: 0;
     left: 0;
+
+    %page-dark & {
+      background-color: $black-300;
+    }
   }
 }
 
@@ -205,4 +236,89 @@
     height: 32px;
     margin-right: 16px;
   }
+}
+
+.header-mobile-button {
+  %page-dark & {
+    color: $white;
+    border: double 2px transparent;
+    border-radius: 8px 8px 8px 0;
+    background-image: linear-gradient($black-300, $black-300), radial-gradient(circle at top left, #00d344, #009482);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+}
+
+// Catalog Menu
+
+.header-catalog-menu {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  padding: 36px 60px;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+  background-color: $white;
+  opacity: 0;
+
+  &--active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  %page-dark & {
+    background-color: $black-600;
+  }
+}
+
+.header-catalog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.header-catalog-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-catalog-list-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  a {
+    position: relative;
+
+    &::after {
+      @include pseudo;
+
+      top: 4px;
+      right: -17px;
+      width: 8px;
+      height: 8px;
+      border: 2px solid $black;
+      border-radius: 2px;
+      transform: rotate(-45deg);
+      border-left: 0;
+      border-top: 0;
+    }
+
+    &:hover {
+      &::after {
+        border-color: $green;
+      }
+    }
+  }
+}
+
+.header-catalog-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin-bottom: 16px;
+  display: block;
 }
