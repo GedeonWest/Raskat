@@ -26,7 +26,7 @@
 }
 
 .button--black {
-  background: $dark;
+  background: $black-600;
   color: $white;
   transition: none;
 
@@ -45,6 +45,12 @@
 
 .button--primary {
   border-radius: 8px 8px 8px 0px;
+}
+
+.button--white {
+  background-color: $white;
+  color: #0A0C08;
+  width: fit-content;
 }
 
 .button--circle {

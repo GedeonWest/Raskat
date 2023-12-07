@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .service-title {
   @include media-breakpoint-down(tablet) {
     font-size: 32px;
@@ -107,5 +108,77 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.service-tabs {
+  margin-bottom: 32px;
+}
+
+.service-regions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.service-regions-tab {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &.tabs-block__tab--active {
+    text-decoration-line: underline;
+    color: $green-600;
+  }
+
+  &:hover {
+    color: $green-600;
+  }
+}
+
+.service-region-cities {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.service-region-city {
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &:hover {
+    background-color: $black-600;
+  }
+
+  &.tabs-block__tab--active {
+    background-color: $black-600;
+    color: $white;
+  }
+}
+
+.city-wrapper {
+  display: flex;
+
+  .contacts-block {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    .link--green {
+      color: $green-300;
+
+      &:hover {
+        color: $green-600;
+      }
+    }
   }
 }

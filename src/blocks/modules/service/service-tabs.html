@@ -1,0 +1,67 @@
+<section class="section service-routes">
+  <div class="container container--decorated">
+    <h2 class="title title--l">Адреса сервисных центров</h2>
+
+    <div class="service-tabs">
+      <!-- Табы регионов -->
+      <div class="service-regions js-tabs">
+        <span
+          class="js-tabs-block__tab service-regions-tab tabs-block__tab tabs-block__tab--active"
+          data-name="view-center"
+          aria-label="Центральный"
+          >Центральный</span
+        >
+        <span
+          class="js-tabs-block__tab service-regions-tab tabs-block__tab"
+          data-name="view-sz"
+          aria-label="Северо-Западный"
+          >Северо-Западный</span
+        >
+        <span
+          class="js-tabs-block__tab service-regions-tab tabs-block__tab"
+          data-name="view-sib"
+          aria-label="Северо-Западный"
+          >Сибирский</span
+        >
+        <span
+          class="js-tabs-block__tab service-regions-tab tabs-block__tab"
+          data-name="view-ural"
+          aria-label="Северо-Западный"
+          >Уральский</span
+        >
+      </div>
+
+      <!-- Контент регионов Центральный-->
+
+      <div
+        class="service-region-content js-tab-content tab-content tab-content--active"
+        data-name="view-center"
+      >
+        @@include("./city-tabs.html")
+      </div>
+
+      <!-- Контент регионов СЗ -->
+
+      <div
+        class="service-region-content js-tab-content tab-content"
+        data-name="view-sz"
+      >
+        Контент для Северо-Запада
+      </div>
+      <div
+        class="service-region-content js-tab-content tab-content"
+        data-name="view-sib"
+      >
+        Контент для Сибири
+      </div>
+      <div
+        class="service-region-content js-tab-content tab-content"
+        data-name="view-ural"
+      >
+        Контент для Урала
+      </div>
+    </div>
+
+    <div class="button featured-button">Скачать список сервисных центров</div>
+  </div>
+</section>

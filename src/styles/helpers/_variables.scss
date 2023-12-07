@@ -4,23 +4,6 @@ $mobile-gap: 16px;
 
 $transition: 0.3s ease;
 
-$fontFamily: 'Inter', sans-serif;
-
-$fontVariants: (
-  regular: regular,
-  500: semibold,
-  bold: bold,
-  italic: italic,
-  bolditalic: bolditalic,
-);
-
-$fontFormats: (
-  eot: embedded-opentype,
-  woff2: woff2,
-  woff: woff,
-  ttf: truetype,
-);
-
 %u-visuallyHidden {
   position: absolute;
   width: 1px;

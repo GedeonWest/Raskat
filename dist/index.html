@@ -116,6 +116,9 @@
           <a href="/sertificates.html" class="link header-link">Сертификаты</a>
         </li>
         <li class="header-navigation-item">
+          <a href="/news.html" class="link header-link">Новости</a>
+        </li>
+        <li class="header-navigation-item">
           <a href="/contacts.html" class="link header-link">Контакты</a>
         </li>
       </ul>
@@ -271,7 +274,7 @@
 
     <main class="main">
       <section class="section hero">
-  <div class="contacts-slider">
+  <div class="contacts-slider hero-slider">
     <div
       class="swiper-container contacts-swiper"
       data-slides-per-view-desktop="1"
@@ -283,35 +286,47 @@
     >
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="contacts-slider-content">
-            <span class="title title--l contacts-title"
+          <div class="hero-slider-content">
+            <span class="title title--l hero-title"
               >Разумный подход к сложным задачам</span
             >
-            <a href="#" class="button">Перейти в каталог</a>
+            <a
+              href="#"
+              class="button button--primary button--white contacts-button"
+              >Перейти в каталог</a
+            >
           </div>
-          <div class="contacts-slider-image">
+          <div class="hero-slider-image">
             <img src="../../../img/banner-image.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="contacts-slider-content">
-            <span class="title title--l contacts-title"
+          <div class="hero-slider-content">
+            <span class="title title--l hero-title"
               >Разумный подход к сложным задачам</span
             >
-            <a href="#" class="button">Перейти в каталог</a>
+            <a
+              href="#"
+              class="button button--primary button--white contacts-button"
+              >Перейти в каталог</a
+            >
           </div>
-          <div class="contacts-slider-image">
+          <div class="hero-slider-image">
             <img src="../../../img/banner-image.png" alt="" />
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="contacts-slider-content">
-            <span class="title title--l contacts-title"
+          <div class="hero-slider-content">
+            <span class="title title--l hero-title"
               >Разумный подход к сложным задачам</span
             >
-            <a href="#" class="button">Перейти в каталог</a>
+            <a
+              href="#"
+              class="button button--primary button--white contacts-button"
+              >Перейти в каталог</a
+            >
           </div>
-          <div class="contacts-slider-image">
+          <div class="hero-slider-image">
             <img src="../../../img/banner-image.png" alt="" />
           </div>
         </div>
@@ -769,7 +784,29 @@
   </div>
 </section>
 
-      
+      <section class="section help">
+  <div class="help-wrapper">
+    <div class="help-content">
+      <h2 class="title title--sm help-title">
+        получите бесплатную консультацию специалиста
+      </h2>
+
+      <button
+        class="button button--white help-button"
+        data-micromodal-trigger="modal-lead"
+      >
+        Получить консультацию
+      </button>
+    </div>
+
+    <picture class="help-image">
+      <source media="(min-width: 768px)" srcset="../../../img/help.png" />
+      <source media="(min-width: 320px)" srcset="../../../img/help-mob.png" />
+      <img src="../../../img/help.png" alt="" />
+    </picture>
+  </div>
+</section>
+
       <section class="section news">
   <span class="title title--l">Новости</span>
   <div class="news-cards">
