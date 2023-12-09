@@ -39,10 +39,6 @@
   }
 
   %toggle-switcher__input:checked + & {
-    background: $black-400;
-
-    %page-dark & {
-      background: $green-300;
-    }
+    background: $green-300;
   }
 }

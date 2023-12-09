@@ -44,6 +44,11 @@
 .request-content {
   @include media-breakpoint-down(tablet) {
     padding: 24px;
+    padding-right: 35%;
+  }
+
+  @include media-breakpoint-down(phone) {
+    padding-right: 30%;
   }
 
   position: relative;
@@ -94,14 +99,26 @@
   font-size: 20px;
   line-height: 1.5em;
   font-weight: 400;
+  margin-top: 0;
 }
 
 .request-image {
   @include media-breakpoint-down(tablet) {
+    position: absolute;
     right: 0;
+    bottom: 0;
     left: auto;
-    width: 100px;
+    margin-bottom: 0;
+    width: 177px;
     height: 100px;
+    background-image: url("../../../img/request-decor.png");
+  }
+
+  @include media-breakpoint-down(phone) {
+    right: 10px;
+    bottom: 24px;
+    width: 80px;
+    height: 80px;
     background-image: url("../../../img/request-decor-mob.png");
   }
 

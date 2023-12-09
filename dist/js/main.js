@@ -18,16 +18,28 @@ var findElements = function findElements() {
   filterToggler = document.querySelector(".js-filter-toggler");
   closeButton = filterHolder.querySelector(".js-filter-close");
 };
-var toggleBudy = function toggleBudy() {
-  document.querySelector("body").classList.toggle("body--stuck");
+var stuckBudy = function stuckBudy() {
+  document.querySelector("body").classList.add("body--stuck");
 };
-var openFilters = function openFilters() {
-  filterHolder.classList.add("catalog-filter-mobile--open");
-  toggleBudy();
+var unStuckBudy = function unStuckBudy() {
+  document.querySelector("body").classList.remove("body--stuck");
 };
 var hideFilters = function hideFilters() {
   filterHolder.classList.remove("catalog-filter-mobile--open");
-  toggleBudy();
+  unStuckBudy();
+};
+var detectOutsideClick = function detectOutsideClick(e) {
+  console.log(e.target);
+  if (!filterHolder.contains(e.target) && e.target !== filterToggler) {
+    hideFilters();
+  }
+};
+var openFilters = function openFilters() {
+  filterHolder.classList.add("catalog-filter-mobile--open");
+  stuckBudy();
+  window.addEventListener("click", function (e) {
+    return detectOutsideClick(e);
+  });
 };
 var onCloseClick = function onCloseClick() {
   hideFilters();
@@ -108,6 +120,11 @@ var menu;
 var button;
 var catalogButton;
 var headerCatalog;
+var headerNavList;
+var catalogTrigers;
+var windowWidth;
+var buttonBack;
+var activeClass = "header-catalog-menu--active";
 var findElements = function findElements() {
   burger = document.querySelector(".header-burger");
   menu = document.querySelector(".header-mobile");
@@ -115,19 +132,54 @@ var findElements = function findElements() {
   burger = document.querySelector(".header-burger");
   headerCatalog = document.querySelector("#headerCatalog");
   catalogButton = document.querySelector("#catalogLink");
+  headerNavList = document.querySelector(".header-navigation-list");
+  catalogTrigers = document.querySelectorAll(".catalog-trigger");
+  buttonBack = document.querySelector(".header-catalog-back");
 };
+function updateSize() {
+  windowWidth = window.innerWidth;
+}
 var toggleBudy = function toggleBudy() {
   document.querySelector("body").classList.toggle("body--stuck");
   document.querySelector("body").classList.toggle("body--stuck--no-dark");
 };
+function closeCatalogMenu() {
+  headerCatalog.classList.remove(activeClass);
+  document.querySelector("body").classList.remove("body--stuck");
+}
+var handleBackButtonClick = function handleBackButtonClick() {
+  headerCatalog.classList.remove(activeClass);
+};
+var detectOutsideClick = function detectOutsideClick(e) {
+  if (!headerCatalog.contains(e.target) && e.target !== catalogButton) {
+    closeCatalogMenu();
+  }
+};
 var toggleCatalogMenu = function toggleCatalogMenu() {
-  headerCatalog.classList.toggle("header-catalog-menu--active");
+  headerCatalog.classList.add(activeClass);
+  document.querySelector("body").classList.add("body--stuck");
+  if (windowWidth > 1025) {
+    window.addEventListener("click", function (e) {
+      return detectOutsideClick(e);
+    });
+  }
 };
 var onButtonClick = function onButtonClick() {
   toggleBudy();
   burger.classList.toggle("header-burger--close");
   menu.classList.toggle("header-mobile--show");
+  closeCatalogMenu();
 };
+function activeLink() {
+  var path = document.location.href;
+  var links = headerNavList.getElementsByTagName("a");
+  for (var i = links.length - 1; i >= 0; i--) {
+    if (path.indexOf(links[i].href) != -1) {
+      links[i].classList.add("link--active");
+      break;
+    }
+  }
+}
 var subscribe = function subscribe() {
   if (burger) {
     burger.addEventListener("click", function () {
@@ -139,16 +191,24 @@ var subscribe = function subscribe() {
       return onButtonClick();
     });
   }
-  if (catalogButton) {
-    console.log(catalogButton);
-    catalogButton.addEventListener("click", function () {
-      return toggleCatalogMenu();
+  if (catalogTrigers) {
+    catalogTrigers.forEach(function (triggerLink) {
+      triggerLink.addEventListener("click", function () {
+        return toggleCatalogMenu();
+      });
     });
   }
+  if (buttonBack) {
+    buttonBack.addEventListener("click", function () {
+      return handleBackButtonClick();
+    });
+  }
+  window.onload = activeLink;
+  window.addEventListener("resize", updateSize);
 };
 function init() {
+  updateSize();
   findElements();
-  console.log(burger, menu);
   subscribe();
 }
 init();
@@ -212,15 +272,21 @@ function initSliders() {
       },
       1025: {
         slidesPerView: 4
+        // spaceBetween: 0,
       },
+
       1319: {
         slidesPerView: 5
+        // spaceBetween: 0,
       },
+
       1920: {
         slidesPerView: 5
+        // spaceBetween: 0,
       }
     }
   });
+
   prodSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-swiper", {
     spaceBetween: 10,
     navigation: {
@@ -354,8 +420,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tabs */ "./src/js/import/tabs/index.js");
 /* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gallery */ "./src/js/import/gallery/index.js");
 /* harmony import */ var _showMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./showMore */ "./src/js/import/showMore/index.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form */ "./src/js/import/form/index.js");
 
 "./accordion/index";
+
 
 
 
@@ -367,7 +435,102 @@ __webpack_require__.r(__webpack_exports__);
 (0,_range__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_gallery__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_form__WEBPACK_IMPORTED_MODULE_5__["default"])();
 // slider();
+
+/***/ }),
+
+/***/ "./src/js/import/form/forms.js":
+/*!*************************************!*\
+  !*** ./src/js/import/form/forms.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var micromodal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! micromodal */ "./node_modules/micromodal/dist/micromodal.es.js");
+
+var closers;
+var findElements = function findElements(object) {
+  var instance = object;
+  var node = instance.node;
+  var submitButton = node.querySelector(".js-submit-modal");
+  closers = document.querySelectorAll(".success-close");
+};
+var onSubmit = function onSubmit(e) {
+  e.preventDefault();
+  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close("modal-call");
+  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].show("modal-success");
+};
+var onCloseClick = function onCloseClick(form) {
+  micromodal__WEBPACK_IMPORTED_MODULE_0__["default"].close("modal-success");
+  form.reset();
+};
+var subscribe = function subscribe(instance) {
+  var object = instance;
+  var node = object.node;
+  node.addEventListener("submit", function (e) {
+    return onSubmit(e);
+  });
+  console.log(closers);
+  closers.forEach(function (closer) {
+    closer.addEventListener("click", function () {
+      return onCloseClick(node);
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (node) {
+  var instance = {
+    node: node
+  };
+  var init = function init() {
+    findElements(instance);
+    subscribe(instance);
+  };
+  init();
+});
+
+/***/ }),
+
+/***/ "./src/js/import/form/index.js":
+/*!*************************************!*\
+  !*** ./src/js/import/form/index.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forms */ "./src/js/import/form/forms.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
+var forms;
+var shouldRun = function shouldRun() {
+  return document.querySelector(".js-call-form");
+};
+var findElements = function findElements() {
+  forms = _toConsumableArray(document.querySelectorAll(".js-call-form"));
+};
+var subscribe = function subscribe() {
+  forms.forEach(_forms__WEBPACK_IMPORTED_MODULE_0__["default"]);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+  if (!shouldRun()) {
+    return;
+  }
+  findElements();
+  subscribe();
+});
 
 /***/ }),
 

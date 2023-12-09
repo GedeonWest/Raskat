@@ -2,6 +2,12 @@
   @include media-breakpoint-down(tablet) {
     margin-bottom: 16px;
   }
+
+  margin-bottom: 24px;
+}
+
+.news-item-date {
+  margin-bottom: 12px;
 }
 
 .news-item-image {

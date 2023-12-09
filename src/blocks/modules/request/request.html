@@ -5,15 +5,15 @@
         >Поможем с подбором оборудования</span
       >
       <p class="request-description">
-        Оставьте заявку, мы перезвонимм в ближайшее время и проконсультируем по
-        всем вопросам
+        Оставьте заявку, мы&nbsp;перезвоним в&nbsp;ближайшее время
+        и&nbsp;проконсультируем по&nbsp;всем вопросам
       </p>
 
       <div class="request-image"></div>
     </div>
 
     <div class="request-form-wrapper">
-      <form action="post" class="form request-form js-form">
+      <form class="form request-form js-form js-call-form">
         <div class="form-field">
           <label for="" class="form-field-label">
             <input
@@ -21,6 +21,7 @@
               name="name"
               class="form-field-input js-form-field"
               placeholder="Имя"
+              required
             />
           </label>
         </div>
@@ -32,6 +33,7 @@
               name="phone"
               class="form-field-input js-form-field"
               placeholder="Телефон"
+              required
             />
           </label>
         </div>
@@ -43,15 +45,12 @@
               name="email"
               class="form-field-input js-form-field"
               placeholder="Электронная почта"
+              required
             />
           </label>
         </div>
 
-        <button
-          type="submit"
-          class="button button--decorate js-submit-button"
-          data-micromodal-trigger="modal-lead"
-        >
+        <button type="submit" class="button button--decorate js-submit-button">
           Получить консультацию
         </button>
 

@@ -115,6 +115,11 @@
     padding: 16px $tablet-gap;
   }
 
+  @include media-breakpoint-down(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,4 +148,36 @@
   font-weight: 400;
   color: $gray-600;
   margin: 0;
+}
+
+.footer-legal {
+  @include media-breakpoint-down(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  display: flex;
+  align-items: center;
+
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-600;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      @include media-breakpoint-down(phone) {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      margin-right: 36px;
+    }
+  }
 }

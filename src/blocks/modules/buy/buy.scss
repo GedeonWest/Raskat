@@ -28,7 +28,6 @@
   }
 
   position: relative;
-  min-width: 226px;
   height: 120px;
   border: 1px solid #f1f1f1;
   border-radius: 8px;
@@ -52,5 +51,13 @@
     .buy-list-item:hover & {
       opacity: 1;
     }
+  }
+}
+
+.buy-container {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

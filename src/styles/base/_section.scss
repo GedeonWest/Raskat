@@ -34,7 +34,7 @@
 
 .middle-wrapper {
   max-width: 60%;
-  margin: 0 auto;
+  margin: 16px auto 0;
 
   @include media-breakpoint-down(desktop) {
     max-width: 100%;

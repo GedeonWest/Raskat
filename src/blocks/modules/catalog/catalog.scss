@@ -164,6 +164,10 @@
 
     use {
       stroke: $black-400;
+
+      %page-dark & {
+        stroke: $white;
+      }
     }
   }
 }

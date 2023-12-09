@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable plugin/selector-bem-pattern */
 .header {
   @include media-breakpoint-down(desktop) {
     padding: 16px $tablet-gap;
@@ -15,6 +17,10 @@
   padding: 16px $desktop-gap;
   border-bottom: 1px solid $gray-300;
   background-color: $gray-200;
+
+  .body--stuck & {
+    z-index: 1001;
+  }
 
   %page-dark & {
     background-color: transparent;
@@ -252,8 +258,15 @@
 // Catalog Menu
 
 .header-catalog-menu {
+  @include media-breakpoint-down(tablet) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 57px);
+    padding: 36px 20px;
+  }
+
   position: fixed;
-  z-index: 99;
+  z-index: 1001;
   right: 0;
   left: 0;
   padding: 36px 60px;
@@ -261,10 +274,12 @@
   transition: all 0.3s;
   background-color: $white;
   opacity: 0;
+  pointer-events: none;
 
   &--active {
     transform: translateY(0);
     opacity: 1;
+    pointer-events: all;
   }
 
   %page-dark & {
@@ -273,6 +288,11 @@
 }
 
 .header-catalog-content {
+  @include media-breakpoint-down(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    flex: 1;
+  }
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -321,4 +341,23 @@
   line-height: 1.3em;
   margin-bottom: 16px;
   display: block;
+}
+
+.header-catalog-back {
+  @include media-breakpoint-down(tablet) {
+    display: flex;
+  }
+
+  display: none;
+  width: 100%;
+  margin-top: 48px;
+
+  %page-dark & {
+    color: $white;
+    border: double 2px transparent;
+    border-radius: 8px 8px 8px 0;
+    background-image: linear-gradient($black-300, $black-300), radial-gradient(circle at top left, #00d344, #009482);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
 }

@@ -3,22 +3,20 @@
 
   &:active {
 
-    %page-dark & {
-      .noUi-handle {
-        background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
-  
-        &-lower {
-          background: #00D344;
-        }
-  
-        &-upper {
-          background: #009482;
-        }
+    .noUi-handle {
+      background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
+
+      &-lower {
+        background: #00D344;
       }
-  
-      .noUi-connect {
-        background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
+
+      &-upper {
+        background: #009482;
       }
+    }
+
+    .noUi-connect {
+      background: linear-gradient(90deg, #00D344 -2.5%, #009482 103.54%);
     }
   }
 }

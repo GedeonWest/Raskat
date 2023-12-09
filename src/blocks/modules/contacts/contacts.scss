@@ -39,6 +39,10 @@
 }
 
 .contacts-slider {
+  @include media-breakpoint-down(phone) {
+    margin: 36px -16px 0;
+  }
+
   position: relative;
   margin-top: 36px;
 
@@ -66,10 +70,18 @@
     }
 
     &-prev {
+      @include media-breakpoint-down(phone) {
+        left: 16px;
+      }
+
       left: -24px;
     }
 
     &-next {
+      @include media-breakpoint-down(phone) {
+        right: 16px;
+      }
+
       right: -24px;
     }
 
@@ -125,6 +137,11 @@
 }
 
 .contacts-slider-image {
+  @include media-breakpoint-down(phone) {
+    padding-top: calc(100% / (3.6 / 5));
+    border-radius: 0;
+  }
+
   position: relative;
   border-radius: 8px;
   overflow: hidden;

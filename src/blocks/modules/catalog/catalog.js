@@ -10,23 +10,38 @@ const findElements = () => {
     closeButton = filterHolder.querySelector(".js-filter-close");
 };
 
-const toggleBudy = () => {
-    document.querySelector("body").classList.toggle("body--stuck");
+const stuckBudy = () => {
+    document.querySelector("body").classList.add("body--stuck");
 };
 
-const openFilters = () => {
-    filterHolder.classList.add("catalog-filter-mobile--open");
-    toggleBudy();
+const unStuckBudy = () => {
+    document.querySelector("body").classList.remove("body--stuck");
 };
 
 const hideFilters = () => {
     filterHolder.classList.remove("catalog-filter-mobile--open");
-    toggleBudy();
+    unStuckBudy();
 };
+
+const detectOutsideClick = (e) => {
+    console.log(e.target);
+    if (!filterHolder.contains(e.target) && e.target !== filterToggler) {
+        hideFilters();
+    }
+};
+
+const openFilters = () => {
+    filterHolder.classList.add("catalog-filter-mobile--open");
+    stuckBudy();
+    window.addEventListener("click", (e) => detectOutsideClick(e));
+};
+
   
 const onCloseClick = () => {
     hideFilters();
 };
+
+
 
 const subscribe = () => {
     filterToggler.addEventListener("click", openFilters);

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Raskat</title>
-    <meta name="theme-color" content="#fff" />
+    <title>Raskat Strike Product</title>
+    <meta name="theme-color" content="#c9e0e04d" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
@@ -92,7 +92,7 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body>
+  <body class="page page--dark">
     <header class="header">
   <div class="header-wrapper">
     <a href="/" class="header-logo">
@@ -458,11 +458,99 @@
 </div>
 
 
-    <main class="main">
-      <section class="section hero">
-  <div class="contacts-slider hero-slider">
+    <main>
+      <section class="section product">
+  <ul class="list breadcrumbs">
+    <li class="breadcrumbs-item">
+      <a href="/" class="link breadcrumbs-link">Главная</a>
+    </li>
+    <li class="breadcrumbs-item">
+      <a href="/catalog.html" class="link breadcrumbs-link">Каталог</a>
+    </li>
+    <li class="breadcrumbs-item">
+      <a href="/" class="link breadcrumbs-link">MicroBT M50S++ 154 TH/s</a>
+    </li>
+  </ul>
+
+  <div class="product-card">
+  <div class="product-slider">
+  <div class="product-slider-thumb-holder">
+    <button class="swiper-button swiper-button-prev product-slider-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="8"
+        viewBox="0 0 16 8"
+        fill="none"
+      >
+        <path
+          d="M15 7L8.78095 1.66938C8.33156 1.2842 7.66844 1.2842 7.21905 1.66938L1 7"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
     <div
-      class="swiper-container contacts-swiper"
+      class="swiper-container product-swiper-thumb"
+      data-direction="vertical"
+      data-direction-mobile="horizontal"
+      data-slides-per-view-desktop="5"
+      data-slides-per-view-wide="5"
+      data-slides-per-view="5"
+      data-slides-per-view-tablet="4"
+      data-slides-per-view-mobile="4"
+      data-gap="8"
+      data-thumb="product-swiper"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-thumb">
+  <img src="../../../img/thumb.png" alt="" />
+</div>
+</div>
+      </div>
+    </div>
+    <button class="swiper-button swiper-button-next product-slider-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="8"
+        viewBox="0 0 16 8"
+        fill="none"
+      >
+        <path
+          d="M1 0.999999L7.21905 6.33061C7.66844 6.7158 8.33156 6.7158 8.78095 6.33061L15 0.999999"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="product-slider-main-holder">
+    <div
+      class="swiper-container product-swiper"
       data-slides-per-view-desktop="1"
       data-slides-per-view-wide="1"
       data-slides-per-view="1"
@@ -471,60 +559,391 @@
       data-gap="8"
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="hero-slider-content">
-            <span class="title title--l hero-title"
-              >Разумный подход к сложным задачам</span
-            >
-            <a
-              href="#"
-              class="button button--primary button--white contacts-button"
-              >Перейти в каталог</a
-            >
-          </div>
-          <div class="hero-slider-image">
-            <img src="../../../img/banner-image.png" alt="" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hero-slider-content">
-            <span class="title title--l hero-title"
-              >Разумный подход к сложным задачам</span
-            >
-            <a
-              href="#"
-              class="button button--primary button--white contacts-button"
-              >Перейти в каталог</a
-            >
-          </div>
-          <div class="hero-slider-image">
-            <img src="../../../img/banner-image.png" alt="" />
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hero-slider-content">
-            <span class="title title--l hero-title"
-              >Разумный подход к сложным задачам</span
-            >
-            <a
-              href="#"
-              class="button button--primary button--white contacts-button"
-              >Перейти в каталог</a
-            >
-          </div>
-          <div class="hero-slider-image">
-            <img src="../../../img/banner-image.png" alt="" />
-          </div>
-        </div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
+        <div class="swiper-slide"><div class="product-slider-card">
+  <div class="product-slider-card-image">
+    <img src="../../../img/slider-main.png" alt="" />
+  </div>
+</div>
+</div>
       </div>
     </div>
-
-    <div class="swiper-pagination"></div>
   </div>
-</section>
+</div>
+ <div class="product-info">
+  <h1 class="title title--sm product-info-title">
+    MicroBT M50S++ 154&nbsp;TH/s
+  </h1>
 
-      <section class="section featured">
-  <h2 class="title title--l">Популярные товары</h2>
+  <div class="card-content-holder">
+    <div class="card-content-row">
+      <span class="card-content-row-name">Потребление</span>
+      <span class="card-content-row-value">3234 Вт.</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Алгоритм</span>
+      <span class="card-content-row-value">SHA-256</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Хешрейт</span>
+      <span class="card-content-row-value">154 Th/s</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Окупаемость</span>
+      <span class="card-content-row-value">207 д.</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Монеты</span>
+      <span class="card-content-row-value">BTC</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Производитель</span>
+      <span class="card-content-row-value">MicroBT</span>
+    </div>
+    <div class="card-content-row">
+      <span class="card-content-row-name">Гарантийный срок</span>
+      <span class="card-content-row-value">6 месяцев</span>
+    </div>
+  </div>
+
+  <a href="#" class="link product-info-link">Перейти к характеристикам</a>
+
+  <a
+    href="/buy.html"
+    class="button button--full button--decorate product-info-button"
+  >
+    Где купить
+  </a>
+  <p class="product-info-description">
+    Стоимость продукта может отличаться в зависимости от места и способа
+    приобретения
+  </p>
+</div>
+
+</div>
+ <div class="product-about">
+  <div class="product-about-tabs js-tabs">
+    <h3
+      data-name="view-description"
+      class="js-tabs-block__tab product-about-tab tabs-block__tab tabs-block__tab--active"
+      aria-label="Описание"
+    >
+      Описание
+    </h3>
+    <h3
+      data-name="view-info"
+      class="js-tabs-block__tab product-about-tab tabs-block__tab"
+      aria-label="Характеристики"
+    >
+      Характеристики
+    </h3>
+    <h3
+      data-name="view-garanty"
+      class="js-tabs-block__tab product-about-tab tabs-block__tab"
+      aria-label="Обзор"
+    >
+      Обзор
+    </h3>
+  </div>
+
+  <div
+    class="product-about-content editor js-tab-content tab-content tab-content--active"
+    data-name="view-description"
+  >
+    <p>
+      Компания MICROBT с 2016 года специализируется на разработке технологий в
+      области добычи криптовалют. Оборудование бренда популярно во всем мире и
+      на равных конкурирует с другим известным производителем — компанией
+      Bitmain. Асики серии WhatsMiner обрели известность, благодаря надёжности и
+      высокой доходности майнинга биткоина.6 апреля 2022г. компания MICROBT
+      презентовала революционную модель WhatsMiner M50. Цель компании — создать
+      устройство, способное в течении длительного времени поддерживать высокую
+      рентабельность майнинга, несмотря на растущую сложность сети и появление
+      новых моделей. Модель построена на 5 нанометровых чипах Samsung – против
+      16 н.мт в предыдущем поколении. Это значительно ускоряет процесс добычи
+      токенов.
+    </p>
+  </div>
+
+  <div
+    class="product-about-content editor js-tab-content tab-content"
+    data-name="view-info"
+  >
+    <div class="card-content-holder">
+      <div class="card-content-row">
+        <span class="card-content-row-name">Потребление</span>
+        <span class="card-content-row-value">3234 Вт.</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Алгоритм</span>
+        <span class="card-content-row-value">SHA-256</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Хешрейт</span>
+        <span class="card-content-row-value">154 Th/s</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Окупаемость</span>
+        <span class="card-content-row-value">207 д.</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Монеты</span>
+        <span class="card-content-row-value">BTC</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Производитель</span>
+        <span class="card-content-row-value">MicroBT</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Гарантийный срок</span>
+        <span class="card-content-row-value">6 месяцев</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Тип чипа</span>
+        <span class="card-content-row-value">SoC</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Техпроцесс</span>
+        <span class="card-content-row-value">16 нм</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Энергоэффективность</span>
+        <span class="card-content-row-value">39 Дж\т</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Блок питания</span>
+        <span class="card-content-row-value">в комплекте</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Подключение к сети</span>
+        <span class="card-content-row-value">Lan</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Охлаждение</span>
+        <span class="card-content-row-value">2 вентилятора</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Уровень шума</span>
+        <span class="card-content-row-value">75 Дб</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Материал</span>
+        <span class="card-content-row-value">Сталь</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Ширина</span>
+        <span class="card-content-row-value">208 мм</span>
+      </div>
+      <div class="card-content-row">
+        <span class="card-content-row-name">Высота</span>
+        <span class="card-content-row-value">338 мм</span>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="product-about-content editor js-tab-content tab-content"
+    data-name="view-garanty"
+  >
+    <h4>Основные положения гарантийного обслуживания.</h4>
+    <ol>
+      <li>
+        Гарантийные обязательства за товар, приобретённый в нашей компании несёт
+        Производитель.
+      </li>
+      <li>
+        Гарантийный срок на проданное оборудование устанавливается.
+        Производителем товара и исчисляется со дня продажи.
+      </li>
+      <li>Гарантийное обслуживание производится в нашем Сервисном Центре.</li>
+    </ol>
+
+    <h4>Изделие снимается с гарантийного обслуживания в следующих случаях:</h4>
+    <ol>
+      <li>
+        Повреждение при транспортировке или нарушении правил эксплуатации.
+      </li>
+      <li>
+        Если изделие имеет механические, термические, электрические повреждения.
+      </li>
+      <li>
+        Повреждения, вызванные попаданием внутрь изделия посторонних предметов,
+        веществ, жидкостей, насекомых и т.п.
+      </li>
+      <li>
+        Сильное запыление либо загрязнение изделия. Плесень, грибки, налёты
+        органического и неорганического происхождения.
+      </li>
+      <li>
+        Имеются следы постороннего вмешательства или была попытка
+        несанкционированного ремонта.
+      </li>
+      <li>
+        Электрические повреждения ЭРИ или токоведущих дорожек, определяемые
+        визуально.
+      </li>
+      <li>
+        Гарантийная наклейка или серийный номер изделия удалены, исправлены или
+        повреждены.
+      </li>
+      <li>
+        Повреждения, вызванные использованием нестандартного или не прошедшего
+        тестирования на совместимость оборудования.
+      </li>
+      <li>
+        Повреждения, вызванные несоответствием Государственным стандартам
+        параметров питающих, телекоммуникационных, кабельных сетей и другими
+        внешними факторами.
+      </li>
+      <li>
+        Если изделие использовалось в целях, не соответствующих его прямому
+        назначению, в том числе при эксплуатации бытовых изделий в коммерческих
+        или промышленных целях.
+      </li>
+      <li>
+        Дефект вызван действием непреодолимых сил, несчастным случаем,
+        умышленными или неосторожными действиями пользователя или третьих лиц.
+      </li>
+      <li>
+        Дефект вызван установкой на устройство неофициальных прошивок (прошивок,
+        не рекомендованных Производителем устройства), а также прошивок,
+        предназначенных для других устройств.
+      </li>
+    </ol>
+
+    <h4>Гарантийные обязательства не распространяются:</h4>
+    <ol>
+      <li>
+        На расходные материалы и дополнительные принадлежности, которые могут
+        идти в комплекте с оборудованием: упаковку, монтажные приспособления,
+        кабели, документацию и носители информации различных типов (диски с
+        драйверами и т.п.), элементы питания дополнительных устройств
+        (батарейки) и т.п.
+      </li>
+      <li>
+        На ущерб, причинённый другому оборудованию, работающему в сопряжении с
+        данным изделием.
+      </li>
+      <li>
+        На совместимость данного изделия с изделиями и программными продуктами
+        третьих сторон, в части их совместимости, конфигурирования.
+      </li>
+      <li>
+        Отказ от ответственности за сопутствующие убытки. Компания ни при каких
+        условиях не несёт ответственности за какой‑либо ущерб (включая все, без
+        исключения, случаи потери прибылей, прерывания деловой активности,
+        потери деловой информации, либо других денежных потерь), связанный с
+        использованием или невозможностью использования проданного товара.
+      </li>
+    </ol>
+
+    <h4>Приёмка изделий:</h4>
+    <ol>
+      <li>
+        Оборудование принимается в оригинальной упаковке с полным комплектом.
+      </li>
+      <li>
+        Перед отправкой оборудования в СЦ, рекомендуется проверить гарантийный
+        статус отправляемого оборудования по электронной почте sc@3l.ru, и
+        только после получения ответа на запрос от отдела гарантии 3logic Group
+        осуществлять отправки.
+      </li>
+      <li>
+        В случае, если оборудование не имеет производственного серийного номера,
+        при отправке к ним следует приобщить копию товарной накладной ТОРГ-12,
+        которая подтвердит покупку.
+      </li>
+      <li>
+        К каждой отдельно взятой неисправной единице товара должно обязательно
+        прилагаться описание неисправности, заполненное в ФОРМЕ ДЛЯ РЕКЛАМАЦИЙ.
+      </li>
+      <li>
+        Упаковка, в которой Клиент отправляет оборудование, должна быть
+        промаркирована ясно читаемой надписью «В сервисный центр», и должна
+        содержать опись вложения с указанием адреса электронной почты
+        отправителя (для связи и отправки накладных).
+      </li>
+      <li>
+        Изделие не принимается на гарантийное обслуживание в случае обнаружения
+        нарушений правил эксплуатации.
+      </li>
+      <li>
+        Компания оставляет за собой право отказа в гарантийном обслуживании при
+        обнаружении признаков нарушения правил эксплуатации в процессе
+        тестирования или ремонта.
+      </li>
+    </ol>
+
+    <h4>Сроки гарантийного обслуживания и возврат изделий:</h4>
+    <ol>
+      <li>
+        Ремонт или замена производятся в течение 21-го рабочего дня с момента
+        поступления неисправного оборудования в сервисный центр.
+      </li>
+      <li>По окончании обслуживания в порядке убывания приоритета:</li>
+      <li>Выдаётся отремонтированное изделие.</li>
+      <li>Производится замена на такое же новое изделие.</li>
+      <li>
+        В случае отсутствия на складе отдела гарантии изделий, удовлетворяющих
+        требованиям, оформляется документ зачёта стоимости.
+      </li>
+      <li>
+        Выдача товара из ремонта клиентам осуществляется только при наличии
+        доверенности на получение материальных ценностей и накладной сервисного
+        центра.
+      </li>
+      <li>
+        Сервисный центр не несёт ответственности за механические повреждения
+        оборудования, возникшие в процессе транспортировки, по вине служб
+        доставки или курьеров и вправе отказать в гарантийном обслуживании при
+        возникновении таких повреждений.
+      </li>
+      <li>
+        Неявка клиента для получения подготовленных к выдаче оборудования не
+        может трактоваться как несоблюдение компанией обязательств по срокам
+        сервисного обслуживания. Если клиент не обращается для получения
+        подготовленных к выдаче изделий, то по истечении 6 месяцев со дня приёма
+        изделий в гарантийное обслуживание товарная задолженность аннулируется.
+      </li>
+      <li>
+        Претензии по внешнему виду устройств, принятых клиентом после ремонта,
+        принимаются в течение трёх дней.
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+  <h2 class="title title--l product-featured-title">Похожие товары</h2>
   <div class="featured-cards">
     <div class="card">
   <div class="card-image-holder">
@@ -851,211 +1270,6 @@
   </div>
 
   <a href="/catalog.html" class="button featured-button"> Перейти в каталог </a>
-</section>
-
-      <section class="section info">
-  <div class="info-wrapper">
-    <div class="container container--decorated info-container">
-      <h2 class="title title--l info-title">Покупаю для себя</h2>
-
-      <p class="description info-description">
-        Страховка и гарантия на все оборудование
-      </p>
-
-      <a href="/buy.html" class="button button--primary info-button"
-        >Смотреть все маркетплейсы</a
-      >
-    </div>
-
-    <div class="container container--decorated info-container">
-      <h2 class="title title--l info-title">Покупаю в компанию</h2>
-
-      <p class="description info-description">
-        Страховка и гарантия на все оборудование
-      </p>
-
-      <a href="/buy.html" class="button button--primary info-button"
-        >Где купить
-      </a>
-    </div>
-  </div>
-</section>
-
-      <section class="section about">
-  <div class="container container--decorated">
-    <div class="about-wrapper">
-      <h2 class="title title--l about-title">О компании</h2>
-      <div class="about-content">
-        <p class="description about-description">
-          <b>Raskat</b> – это компьютерная техника под широкий спектр задач:
-          домашние и офисные модели, компьютеры для игр и эксклюзивные мощнейшие
-          решения. Это современные надёжные ПК, созданные на базе комплектующих
-          от ведущих мировых производителей. Покупателю доступны широкие
-          возможности по апгрейду и модернизации техники и выгодные условия
-          гарантийного обслуживания.
-        </p>
-
-        <p class="description about-description">
-          <b>Raskat</b> – собственная торговая марка компании 3Logic Group.
-          Являясь лидером в дистрибьюции компьютерной техники и комплектующих,
-          компания гарантирует качество продуктов и разумное ценообразование.
-        </p>
-
-        <p class="description about-description">
-          Инфраструктурой от 3Logic Group оснащены государственные учреждения
-          Москвы и Московской области, МЧС России, Сбербанк, современные
-          киберпространства по всей России. Продукцию компании рекомендуют
-          ведущие техноблогеры страны.
-        </p>
-      </div>
-    </div>
-
-    <div class="about-video-holder">
-      <iframe
-        src="https://www.youtube.com/embed/H3oDXAfhyKI?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;origin=https://chilkoot.ru&amp;playlist=H3oDXAfhyKI&amp;mute=1"
-        frameborder="0"
-        allow="fullscreen"
-        id="widget2"
-        title="Chilkoot Final"
-      ></iframe>
-    </div>
-
-    <div class="cons about-cons">
-  <div class="cons-item">
-    <div class="cons-icon">
-      <svg>
-        <use xlink:href="img/sprites/sprite.svg#new"></use>
-      </svg>
-    </div>
-
-    <div class="cons-content">
-      <span class="cons-title">Новые комплектующие</span>
-      <p class="cons-description">
-        Все компоненты в компьютерах RASKAT являются новыми и выпущены ведущими
-        мировыми производителями.
-      </p>
-    </div>
-  </div>
-
-  <div class="cons-item">
-    <div class="cons-icon">
-      <svg>
-        <use xlink:href="img/sprites/sprite.svg#prise"></use>
-      </svg>
-    </div>
-
-    <div class="cons-content">
-      <span class="cons-title">3 года гарантии</span>
-      <p class="cons-description">
-        На всю продукцию RASKAT действует 3 года гарантии от производителя.
-      </p>
-    </div>
-  </div>
-
-  <div class="cons-item">
-    <div class="cons-icon">
-      <svg>
-        <use xlink:href="img/sprites/sprite.svg#call"></use>
-      </svg>
-    </div>
-
-    <div class="cons-content">
-      <span class="cons-title">Сервисная поддержка</span>
-      <p class="cons-description">
-        Более 100 авторизованных сервисных центров для продукции RASKAT по всей
-        территории РФ.
-      </p>
-    </div>
-  </div>
-</div>
-
-  </div>
-</section>
-
-      <section class="section help">
-  <div class="help-wrapper">
-    <div class="help-content">
-      <h2 class="title title--sm help-title">
-        получите бесплатную консультацию специалиста
-      </h2>
-
-      <button
-        class="button button--white help-button"
-        data-micromodal-trigger="modal-lead"
-      >
-        Получить консультацию
-      </button>
-    </div>
-
-    <picture class="help-image">
-      <source media="(min-width: 768px)" srcset="../../../img/help.png" />
-      <source media="(min-width: 320px)" srcset="../../../img/help-mob.png" />
-      <img src="../../../img/help.png" alt="" />
-    </picture>
-  </div>
-</section>
-
-      <section class="section news">
-  <span class="title title--l">Новости</span>
-  <div class="news-cards">
-    <div class="news-card">
-  <div class="card-image-holder news-card-image-holder">
-    <a href="/news-item.html" class="card-link"></a>
-    <img src="../../../img/news.png" alt="" class="card-image" />
-  </div>
-
-  <div class="news-card-content">
-    <span class="title title--xxs news-card-title">
-      Большое обновление каталога
-    </span>
-    <p class="description news-card-description">
-      Ассортимент Chilkoot пополнился новыми моделями ASIC-майнеров, готовыми к
-      заказу
-    </p>
-
-    <span class="news-card-date">25.05.2023</span>
-  </div>
-</div>
- <div class="news-card">
-  <div class="card-image-holder news-card-image-holder">
-    <a href="/news-item.html" class="card-link"></a>
-    <img src="../../../img/news.png" alt="" class="card-image" />
-  </div>
-
-  <div class="news-card-content">
-    <span class="title title--xxs news-card-title">
-      Большое обновление каталога
-    </span>
-    <p class="description news-card-description">
-      Ассортимент Chilkoot пополнился новыми моделями ASIC-майнеров, готовыми к
-      заказу
-    </p>
-
-    <span class="news-card-date">25.05.2023</span>
-  </div>
-</div>
- <div class="news-card">
-  <div class="card-image-holder news-card-image-holder">
-    <a href="/news-item.html" class="card-link"></a>
-    <img src="../../../img/news.png" alt="" class="card-image" />
-  </div>
-
-  <div class="news-card-content">
-    <span class="title title--xxs news-card-title">
-      Большое обновление каталога
-    </span>
-    <p class="description news-card-description">
-      Ассортимент Chilkoot пополнился новыми моделями ASIC-майнеров, готовыми к
-      заказу
-    </p>
-
-    <span class="news-card-date">25.05.2023</span>
-  </div>
-</div>
-
-  </div>
-
-  <a href="/news.html" class="button featured-button"> Все новости </a>
 </section>
 
       <seciton class="section section--wide request">

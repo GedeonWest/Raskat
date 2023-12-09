@@ -25,12 +25,15 @@ function initSliders() {
             },
             1025: {
                 slidesPerView: 4,
+                // spaceBetween: 0,
             },
             1319: {
                 slidesPerView: 5,
+                // spaceBetween: 0,
             },
             1920: {
                 slidesPerView: 5,
+                // spaceBetween: 0,
             },
         },
     });
