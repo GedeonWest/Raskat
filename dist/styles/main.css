@@ -1947,6 +1947,10 @@ span {
   margin-left: 8px;
 }
 
+/* stylelint-disable selector-class-pattern */
+
+/* stylelint-disable plugin/selector-bem-pattern */
+
 /* stylelint-disable no-descending-specificity */
 
 /* stylelint-disable scss/percent-placeholder-pattern */
@@ -2180,30 +2184,48 @@ span {
   background-color: #D9D9D9;
 }
 
-.js-more--active .js-more-trigger {
-  display: none;
+.js-more-holder {
+  z-index: 2;
+  transition: margin-top 0.3s ease-in;
+  transform-origin: bottom;
+}
+
+.js-more-holder.js-more--active {
+  background-color: #f9f9f9;
+}
+
+.js-more-holder.js-more--active .card-content-row-name,
+.js-more-holder.js-more--active .card-content-row-value {
+  background-color: #f9f9f9;
+}
+
+.page--dark .js-more-holder.js-more--active {
+  background-color: #181818;
 }
 
 .js-more-trigger {
+  display: flex;
+  align-items: baseline;
+  position: relative;
   cursor: pointer;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  display: flex;
-  align-items: baseline;
   text-decoration: underline;
   text-decoration-style: dashed;
 }
 
 .js-more-trigger svg {
   margin-left: 12px;
+  position: absolute;
+  top: 7px;
+  right: 0;
 }
-
-/* stylelint-disable-next-line plugin/selector-bem-pattern */
 
 .js-more-content {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s ease-in;
 }
 
 .about-wrapper {
@@ -4928,7 +4950,7 @@ span {
 
   .card .card-content-holder .card-content-row-name,
   .card .card-content-holder .card-content-row-value {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .card-content {
@@ -4990,6 +5012,15 @@ span {
     margin-right: 0;
     width: 10px;
     height: 10px;
+  }
+
+  .js-more-trigger {
+    font-size: 12px;
+  }
+
+  .js-more-trigger svg {
+    width: 10px;
+    height: 6px;
   }
 
   .help-wrapper {

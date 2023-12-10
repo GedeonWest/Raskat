@@ -762,6 +762,7 @@ var findElements = function findElements(object) {
   var instance = object;
   var node = instance.node;
   var showMoreContent = node.querySelector(".js-more-content");
+  var moreText = node.querySelector(".card-more-text");
   var showMoreHolder = _toConsumableArray(node.children).find(function (el) {
     return el.classList.contains("js-more-trigger");
   });
@@ -771,16 +772,22 @@ var findElements = function findElements(object) {
     instance.button = node.querySelector(".js-more-trigger");
   }
   instance.content = showMoreContent;
+  instance.text = moreText;
 };
 var onButtonClick = function onButtonClick(object) {
   var instance = object;
   var node = instance.node,
-    content = instance.content;
+    content = instance.content,
+    text = instance.text;
   node.classList.toggle("js-more--active");
   if (content.style.maxHeight) {
     content.style.maxHeight = null;
+    node.style.marginTop = null;
+    text.textContent = "Все характеристики";
   } else {
+    text.textContent = "Скрыть";
     content.style.maxHeight = content.scrollHeight + "px";
+    node.style.marginTop = -content.scrollHeight + "px";
   }
 };
 var subscribe = function subscribe(instance) {

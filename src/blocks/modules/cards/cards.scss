@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable plugin/selector-bem-pattern */
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable scss/percent-placeholder-pattern */
 .card {
@@ -16,7 +18,7 @@
   .card-content-holder {
     .card-content-row-name, .card-content-row-value {
       @include media-breakpoint-down(phone) {
-        font-size: 16px;
+        font-size: 12px;
       }
 
       background-color: $white;
@@ -301,31 +303,54 @@
   }
 }
 
-.js-more {
-  &--active {
-    .js-more-trigger {
-      display: none;
+.js-more-holder {
+  z-index: 2;
+  transition: margin-top 0.3s ease-in;
+  transform-origin: bottom;
+
+  &.js-more--active {
+    background-color: #f9f9f9;
+
+    .card-content-row-name, .card-content-row-value {
+      background-color: #f9f9f9;
+    }
+
+    %page-dark & {
+      background-color: $black-300;
     }
   }
 }
 
 .js-more-trigger {
+  @include media-breakpoint-down(phone) {
+    font-size: 12px;
+  }
+
+  display: flex;
+  align-items: baseline;
+  position: relative;
   cursor: pointer;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  display: flex;
-  align-items: baseline;
   text-decoration: underline;
   text-decoration-style: dashed;
 
   svg {
+    @include media-breakpoint-down(phone) {
+      width: 10px;
+      height: 6px;
+    }
+
     margin-left: 12px;
+    position: absolute;
+    top: 7px;
+    right: 0;
   }
 }
 
-/* stylelint-disable-next-line plugin/selector-bem-pattern */
 .js-more-content {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s ease-in;
 }
