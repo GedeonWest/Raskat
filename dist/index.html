@@ -11,7 +11,7 @@
     />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <link
       rel="shortcut icon"
@@ -477,7 +477,7 @@
               >Разумный подход к сложным задачам</span
             >
             <a
-              href="#"
+              href="/catalog.html"
               class="button button--primary button--white contacts-button"
               >Перейти в каталог</a
             >
@@ -492,7 +492,7 @@
               >Разумный подход к сложным задачам</span
             >
             <a
-              href="#"
+              href="/catalog.html"
               class="button button--primary button--white contacts-button"
               >Перейти в каталог</a
             >
@@ -507,7 +507,7 @@
               >Разумный подход к сложным задачам</span
             >
             <a
-              href="#"
+              href="/catalog.html"
               class="button button--primary button--white contacts-button"
               >Перейти в каталог</a
             >
@@ -883,18 +883,18 @@
       <h2 class="title title--l about-title">О компании</h2>
       <div class="about-content">
         <p class="description about-description">
-          <b>Raskat</b> – это компьютерная техника под широкий спектр задач:
-          домашние и офисные модели, компьютеры для игр и эксклюзивные мощнейшие
-          решения. Это современные надёжные ПК, созданные на базе комплектующих
-          от ведущих мировых производителей. Покупателю доступны широкие
+          Raskat – это компьютерная техника под широкий спектр задач: домашние и
+          офисные модели, компьютеры для игр и эксклюзивные мощнейшие решения.
+          Это современные надёжные ПК, созданные на базе комплектующих от
+          ведущих мировых производителей. Покупателю доступны широкие
           возможности по апгрейду и модернизации техники и выгодные условия
           гарантийного обслуживания.
         </p>
 
         <p class="description about-description">
-          <b>Raskat</b> – собственная торговая марка компании 3Logic Group.
-          Являясь лидером в дистрибьюции компьютерной техники и комплектующих,
-          компания гарантирует качество продуктов и разумное ценообразование.
+          Raskat – собственная торговая марка компании 3Logic Group. Являясь
+          лидером в дистрибьюции компьютерной техники и комплектующих, компания
+          гарантирует качество продуктов и разумное ценообразование.
         </p>
 
         <p class="description about-description">
@@ -992,7 +992,7 @@
 </section>
 
       <section class="section news">
-  <span class="title title--l">Новости</span>
+  <a href="/news.html" class="title title--l news-main-title">Новости</a>
   <div class="news-cards">
     <div class="news-card">
   <div class="card-image-holder news-card-image-holder">
@@ -1053,71 +1053,6 @@
 
   <a href="/news.html" class="button featured-button"> Все новости </a>
 </section>
-
-      <seciton class="section section--wide request">
-  <div class="request-holder">
-    <div class="request-content">
-      <span class="title title--l request-title"
-        >Поможем с подбором оборудования</span
-      >
-      <p class="request-description">
-        Оставьте заявку, мы&nbsp;перезвоним в&nbsp;ближайшее время
-        и&nbsp;проконсультируем по&nbsp;всем вопросам
-      </p>
-
-      <div class="request-image"></div>
-    </div>
-
-    <div class="request-form-wrapper">
-      <form class="form request-form js-form js-call-form">
-        <div class="form-field">
-          <label for="" class="form-field-label">
-            <input
-              type="text"
-              name="name"
-              class="form-field-input js-form-field"
-              placeholder="Имя"
-              required
-            />
-          </label>
-        </div>
-
-        <div class="form-field">
-          <label for="" class="form-field-label">
-            <input
-              type="tel"
-              name="phone"
-              class="form-field-input js-form-field"
-              placeholder="Телефон"
-              required
-            />
-          </label>
-        </div>
-
-        <div class="form-field">
-          <label for="" class="form-field-label">
-            <input
-              type="email"
-              name="email"
-              class="form-field-input js-form-field"
-              placeholder="Электронная почта"
-              required
-            />
-          </label>
-        </div>
-
-        <button type="submit" class="button button--decorate js-submit-button">
-          Получить консультацию
-        </button>
-
-        <p class="form-policy">
-          Нажимая на кнопку, вы соглашаетесь с
-          <a href="#">политикой конфиденциальности</a>
-        </p>
-      </form>
-    </div>
-  </div>
-</seciton>
 
     </main>
     <footer class="footer">
@@ -1323,8 +1258,8 @@
       </p>
 
       <div class="footer-legal">
-        <a href="/policy.html">Политика конфиденциальности</a>
-        <a href="/policy.html">Пользовательское соглашение</a>
+        <a href="/policy.html" target="_blank">Политика конфиденциальности</a>
+        <a href="/policy.html" target="_blank">Пользовательское соглашение</a>
       </div>
     </div>
   </div>
@@ -1415,7 +1350,9 @@
 
         <p class="form-policy">
           Нажимая на кнопку, вы соглашаетесь с
-          <a href="#">политикой конфиденциальности</a>
+          <a href="/policy.html" target="_blank"
+            >политикой конфиденциальности</a
+          >
         </p>
       </form>
     </div>
@@ -1502,13 +1439,15 @@
           </label>
         </div>
 
-        <button type="submit" class="button button--black js-submit-button">
+        <button type="submit" class="button button--decorate js-submit-button">
           Отправить
         </button>
 
         <p class="form-policy">
           Нажимая на кнопку, вы соглашаетесь с
-          <a href="#">политикой конфиденциальности</a>
+          <a href="/policy.html" target="_blank"
+            >политикой конфиденциальности</a
+          >
         </p>
       </form>
     </div>
@@ -1566,6 +1505,7 @@
               name="name"
               class="form-field-input js-form-field"
               placeholder="Имя"
+              required
             />
           </label>
         </div>
@@ -1577,6 +1517,7 @@
               name="phone"
               class="form-field-input js-form-field"
               placeholder="Телефон"
+              required
             />
           </label>
         </div>
@@ -1588,17 +1529,20 @@
               name="email"
               class="form-field-input js-form-field"
               placeholder="Email"
+              required
             />
           </label>
         </div>
 
-        <button type="submit" class="button button--black js-submit-button">
+        <button type="submit" class="button button--decorate js-submit-button">
           Отправить
         </button>
 
         <p class="form-policy">
           Нажимая на кнопку, вы соглашаетесь с
-          <a href="#">политикой конфиденциальности</a>
+          <a href="/policy.html" target="_blank"
+            >политикой конфиденциальности</a
+          >
         </p>
       </form>
     </div>

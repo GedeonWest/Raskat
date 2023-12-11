@@ -15,6 +15,7 @@
   justify-content: center;
   padding-top: 46px;
   padding-bottom: 46px;
+  border-bottom: 1px solid rgba($color: $white, $alpha: 10%);
 
   %page-dark & {
     background-color: #000;

@@ -48,11 +48,11 @@
 
   svg {
     @include media-breakpoint-down(tablet) {
-      width: 120px;
+      width: auto;
       height: 24px;
     }
 
-    width: 190px;
+    width: auto;
     height: 40px;
     color: #000;
 
@@ -100,11 +100,16 @@
   @include media-breakpoint-down(tablet) {
     font-size: 14px;
     margin-right: 16px;
+    display: block;
   }
 
   margin-right: 24px;
   font-weight: 500;
   font-size: 16px;
+
+  @media screen and (max-width: 1320px) {
+    display: none;
+  }
 }
 
 .header-contacts-icon {

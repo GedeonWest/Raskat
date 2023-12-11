@@ -335,6 +335,11 @@
   font-weight: 500;
   text-decoration: underline;
   text-decoration-style: dashed;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $green-600;
+  }
 
   svg {
     @include media-breakpoint-down(phone) {
@@ -346,6 +351,10 @@
     position: absolute;
     top: 7px;
     right: 0;
+
+    .js-more--active & {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -353,4 +362,8 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in;
+
+  .card-content-row {
+    margin-bottom: 8px;
+  }
 }

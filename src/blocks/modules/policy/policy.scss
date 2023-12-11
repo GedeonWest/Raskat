@@ -1,4 +1,14 @@
 .policy {
+  @include media-breakpoint-down(tablet) {
+    margin-bottom: 24px;
+  }
+
+  @include media-breakpoint-down(desktop) {
+    margin-bottom: 44px;
+  }
+
+  margin-bottom: 56px;
+
   p {
     @include media-breakpoint-down(tablet) {
       font-size: 16px;

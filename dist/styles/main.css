@@ -853,6 +853,7 @@ span {
   text-decoration: none;
   transition: all 0.3s;
   overflow: hidden;
+  z-index: 1;
 }
 
 .page--dark .button {
@@ -1034,7 +1035,7 @@ span {
 }
 
 .section + .section {
-  margin-top: 80px;
+  margin-top: 64px;
 }
 
 .section--fullsize {
@@ -1077,7 +1078,7 @@ span {
 }
 
 .title--l {
-  font-size: 42px;
+  font-size: 48px;
   line-height: 1.2em;
   margin-bottom: 32px;
   font-weight: 500;
@@ -1544,7 +1545,7 @@ span {
 }
 
 .header-logo svg {
-  width: 190px;
+  width: auto;
   height: 40px;
   color: #000;
 }
@@ -1810,6 +1811,10 @@ span {
   margin-top: 36px;
 }
 
+.hero-slider.contacts-slider {
+  margin-top: 24px;
+}
+
 .hero-slider .swiper-slide {
   padding: 80px 65% 80px 80px;
 }
@@ -1823,6 +1828,7 @@ span {
 .hero-title {
   color: #ffffff;
   text-transform: uppercase;
+  font-size: 42px;
 }
 
 .hero-slider-image {
@@ -1838,11 +1844,16 @@ span {
 
 .hero-slider-image img {
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.contacts-button {
+  border: 1px solid transparent;
 }
 
 .hero-mainer {
@@ -2213,6 +2224,11 @@ span {
   font-weight: 500;
   text-decoration: underline;
   text-decoration-style: dashed;
+  transition: color 0.3s;
+}
+
+.js-more-trigger:hover {
+  color: #009482;
 }
 
 .js-more-trigger svg {
@@ -2222,10 +2238,18 @@ span {
   right: 0;
 }
 
+.js-more--active .js-more-trigger svg {
+  transform: rotate(180deg);
+}
+
 .js-more-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in;
+}
+
+.js-more-content .card-content-row {
+  margin-bottom: 8px;
 }
 
 .about-wrapper {
@@ -2364,6 +2388,22 @@ span {
   background-image: linear-gradient(#fff, #fff), radial-gradient(circle at top left, #00d344, #009482);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+/* stylelint-disable plugin/selector-bem-pattern */
+
+.section.news {
+  margin-bottom: 80px;
+}
+
+.news-main-title {
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.news-main-title:hover {
+  color: #009482;
 }
 
 .news-count {
@@ -2523,6 +2563,7 @@ span {
   justify-content: center;
   padding-top: 46px;
   padding-bottom: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .page--dark .request {
@@ -2651,7 +2692,7 @@ span {
 }
 
 .footer-logo {
-  width: 260px;
+  width: auto;
   height: 52px;
 }
 
@@ -4102,6 +4143,10 @@ span {
   line-height: 1.5em;
 }
 
+.policy {
+  margin-bottom: 56px;
+}
+
 .policy p {
   font-size: 20px;
   margin: 0 0 24px;
@@ -4360,6 +4405,12 @@ span {
   display: grid;
 }
 
+@media screen and (max-width: 1320px) {
+  .header-contacts-tel {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1319px) {
   .section + .section {
     margin-top: 64px;
@@ -4416,6 +4467,10 @@ span {
     gap: 40px;
   }
 
+  .section.news {
+    margin-bottom: 60px;
+  }
+
   .request {
     padding-top: 46px;
     padding-bottom: 46px;
@@ -4467,12 +4522,16 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .policy {
+    margin-bottom: 44px;
+  }
+
   .buy-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
   .section + .section {
     margin-top: 40px;
   }
@@ -4499,7 +4558,7 @@ span {
   }
 
   .header-logo svg {
-    width: 120px;
+    width: auto;
     height: 24px;
   }
 
@@ -4510,6 +4569,7 @@ span {
   .header-contacts-tel {
     font-size: 14px;
     margin-right: 16px;
+    display: block;
   }
 
   .header-contacts-icon {
@@ -4598,6 +4658,10 @@ span {
 
   .help-image {
     right: 0;
+  }
+
+  .section.news {
+    margin-bottom: 40px;
   }
 
   .news-cards {
@@ -4699,7 +4763,7 @@ span {
   }
 
   .footer-logo {
-    width: 190px;
+    width: auto;
     height: 40px;
     margin-bottom: 16px;
   }
@@ -4918,6 +4982,10 @@ span {
 
   .news-item-description {
     font-size: 16px;
+  }
+
+  .policy {
+    margin-bottom: 24px;
   }
 
   .policy p {
