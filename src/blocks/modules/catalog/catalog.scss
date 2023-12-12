@@ -216,6 +216,12 @@
 
 // Список
 
+.catalog-list {
+  @include media-breakpoint-down(phone) {
+    overflow-x: hidden;
+  }
+}
+
 .catalog-list-wrapper {
   @include media-breakpoint-down(tablet) {
     grid-template-columns: repeat(2, 1fr);
@@ -300,7 +306,6 @@
 
 .catalog-sort-button {
   text-align: left;
-  font-weight: 500;
   line-height: 1.5em;
   color: $gray;
 
@@ -310,6 +315,7 @@
 
   &--active {
     color: $black-400;
+    font-weight: 500;
   }
 }
 
@@ -341,10 +347,11 @@
   min-height: 18px;
   padding: 0 4px;
   border-radius: 100%;
-  background-color: $green-300;
+  background: linear-gradient(180deg, $green-100 -0.02%, $green-600 100.02%);
   font-size: 12px;
   margin-left: 12px;
   font-weight: 600;
+  color: $white;
 }
 
 // Пагинация

@@ -1,3 +1,4 @@
+/* stylelint-disable plugin/selector-bem-pattern */
 .news-feed {
   @include media-breakpoint-down(tablet) {
     grid-template-columns: repeat(2, 1fr);
@@ -11,4 +12,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
+  .news-card {
+    @include media-breakpoint-down(phone) {
+      width: 100%;
+    }
+  }
 }

@@ -39,4 +39,8 @@
   @include media-breakpoint-down(desktop) {
     max-width: 100%;
   }
+
+  @include media-breakpoint-down(phone) {
+    margin-top: 8px;
+  }
 }

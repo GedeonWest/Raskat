@@ -1146,7 +1146,7 @@ span {
 }
 
 .accordion {
-  border-radius: 24px;
+  border-radius: 8px;
   background-color: #ffffff;
   padding: 16px 24px 0;
 }
@@ -1164,6 +1164,14 @@ span {
 
 .js-accordion--active .accordion-top {
   border-bottom: 1px solid #D9D9D9;
+}
+
+.accordion-title {
+  font-size: 20px;
+}
+
+.js-accordion--active .accordion-title {
+  font-weight: 500;
 }
 
 .read-more-button {
@@ -1816,7 +1824,7 @@ span {
 }
 
 .hero-slider .swiper-slide {
-  padding: 80px 65% 80px 80px;
+  padding: 80px 50% 80px 80px;
 }
 
 .hero-slider-content {
@@ -1852,8 +1860,15 @@ span {
   object-fit: cover;
 }
 
-.contacts-button {
-  border: 1px solid transparent;
+.contacts-button:hover {
+  color: #009482;
+  background: #ffffff;
+  border: 1px solid #161616;
+}
+
+.contacts-button:hover::after,
+.contacts-button:hover::before {
+  opacity: 0;
 }
 
 .hero-mainer {
@@ -1927,7 +1942,7 @@ span {
 
 .cons-title {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 150%;
   margin-bottom: 4px;
 }
@@ -2398,12 +2413,6 @@ span {
 
 .news-main-title {
   display: block;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.news-main-title:hover {
-  color: #009482;
 }
 
 .news-count {
@@ -2422,6 +2431,11 @@ span {
   overflow: hidden;
   border: 1px solid #D9D9D9;
   border-radius: 8px;
+}
+
+.news-card-title {
+  display: block;
+  text-decoration: none;
 }
 
 .news-card:hover .news-card-title {
@@ -3130,7 +3144,6 @@ span {
 
 .catalog-sort-button {
   text-align: left;
-  font-weight: 500;
   line-height: 1.5em;
   color: #8E8E8E;
 }
@@ -3141,6 +3154,7 @@ span {
 
 .catalog-sort-button--active {
   color: #1E1E1E;
+  font-weight: 500;
 }
 
 .catalog-sort-layouts {
@@ -3171,10 +3185,11 @@ span {
   min-height: 18px;
   padding: 0 4px;
   border-radius: 100%;
-  background-color: #01BD59;
+  background: linear-gradient(180deg, #00D344 -0.02%, #009482 100.02%);
   font-size: 12px;
   margin-left: 12px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 .pagination {
@@ -3353,6 +3368,7 @@ span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  margin: auto 0;
 }
 
 .card-row-content-item {
@@ -3581,6 +3597,7 @@ span {
 
 .product-info-link {
   margin-bottom: 32px;
+  font-weight: 500;
 }
 
 .page--dark .product-info-link {
@@ -3734,6 +3751,10 @@ span {
   margin-right: 24px;
 }
 
+.product-about-tab.tabs-block__tab--active {
+  font-weight: 500;
+}
+
 .page--dark .product-about-tab.tabs-block__tab--active {
   color: #00D344;
 }
@@ -3785,6 +3806,7 @@ span {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
+  border-radius: 8px 0 0;
 }
 
 .lising-hero-headline {
@@ -3904,7 +3926,13 @@ span {
   background-repeat: repeat;
 }
 
+/* stylelint-disable plugin/selector-bem-pattern */
+
 /* stylelint-disable selector-class-pattern */
+
+.service .help {
+  margin-bottom: 80px;
+}
 
 .service-title {
   margin-bottom: 24px;
@@ -3915,7 +3943,7 @@ span {
   margin-bottom: 48px;
   margin-top: 0;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .services-features-list {
@@ -4004,6 +4032,10 @@ span {
   transition: color 0.3s;
 }
 
+.service-regions-tab:hover {
+  color: #009482;
+}
+
 .service-regions-tab:not(:last-child) {
   margin-right: 24px;
 }
@@ -4013,22 +4045,18 @@ span {
   color: #009482;
 }
 
-.service-regions-tab:hover {
-  color: #009482;
-}
-
 .service-region-cities {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.service-region-city:not(:last-child) {
-  margin-right: 12px;
-}
-
 .service-region-city:hover {
   background-color: #161616;
+}
+
+.service-region-city:not(:last-child) {
+  margin-right: 12px;
 }
 
 .service-region-city.tabs-block__tab--active {
@@ -4044,17 +4072,30 @@ span {
   flex: 1;
 }
 
-.city-wrapper .contacts-block:not(:last-child) {
-  margin-right: 24px;
-}
-
 .city-wrapper .contacts-block .link--green {
   color: #01BD59;
+  text-decoration: underline;
+  text-decoration-style: dashed;
 }
 
 .city-wrapper .contacts-block .link--green:hover {
   color: #009482;
 }
+
+.city-wrapper .contacts-block:not(:last-child) {
+  margin-right: 24px;
+}
+
+.service-cons .cons-item {
+  flex-direction: row;
+}
+
+.service-cons .cons-icon {
+  margin-bottom: 0;
+  margin-right: 12px;
+}
+
+/* stylelint-disable plugin/selector-bem-pattern */
 
 .news-feed {
   display: grid;
@@ -4090,6 +4131,10 @@ span {
 .news-item-description {
   font-size: 20px;
   line-height: 1.5em;
+}
+
+.news-item-description br {
+  margin: 6px 0;
 }
 
 .news-navigation {
@@ -4131,7 +4176,7 @@ span {
 .news-navigation-title {
   display: block;
   margin: 0 0 8px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .news-navigation-content {
@@ -4158,10 +4203,6 @@ span {
   margin-bottom: 8px;
 }
 
-.sertificates-wrapper {
-  margin-bottom: 80px;
-}
-
 .sertificates-list {
   display: flex;
   flex-direction: column;
@@ -4179,6 +4220,10 @@ span {
 
 .sertificates-item:first-child {
   padding-top: 0;
+}
+
+.sertificates-item:last-child {
+  padding-bottom: 0;
 }
 
 .sertificates-item-icon {
@@ -4201,6 +4246,7 @@ span {
 }
 
 .contacts-block-icon {
+  flex-shrink: 0;
   width: 46px;
   height: 46px;
   margin-right: 12px;
@@ -4462,6 +4508,10 @@ span {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .featured-cards .card:last-child {
+    display: none;
+  }
+
   .info-wrapper {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
@@ -4477,8 +4527,11 @@ span {
   }
 
   .footer-top {
-    flex-direction: column;
     padding: 32px 24px;
+  }
+
+  .footer-contacts {
+    min-width: 312px;
   }
 
   .catalog-wrapper {
@@ -4514,6 +4567,10 @@ span {
     max-width: 415px;
   }
 
+  .product-info-button {
+    margin-top: 0;
+  }
+
   .product-lising-list .list-item {
     width: 100%;
   }
@@ -4522,8 +4579,28 @@ span {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .service .help {
+    margin-bottom: 64px;
+  }
+
   .policy {
     margin-bottom: 44px;
+  }
+
+  .sertificates-container {
+    padding: 32px;
+  }
+
+  .contacts-block-content span {
+    font-weight: 500;
+  }
+
+  .contacts-slider .swiper-button-prev {
+    left: 20px;
+  }
+
+  .contacts-slider .swiper-button-next {
+    right: 20px;
   }
 
   .buy-list {
@@ -4614,6 +4691,10 @@ span {
   .featured-cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .featured-cards .card:last-child {
+    display: flex;
   }
 
   .card-labels {
@@ -4763,7 +4844,7 @@ span {
   }
 
   .footer-logo {
-    width: auto;
+    width: 172px;
     height: 40px;
     margin-bottom: 16px;
   }
@@ -4811,7 +4892,7 @@ span {
     margin-right: 0;
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0 32px;
   }
 
   .product-slider-main-holder {
@@ -4836,6 +4917,7 @@ span {
   .product-slider-button.swiper-button-prev {
     margin-right: 12px;
     margin-bottom: 0;
+    left: 0;
   }
 
   .product-slider-button.swiper-button-prev svg {
@@ -4845,6 +4927,7 @@ span {
   .product-slider-button.swiper-button-next {
     margin-top: 0;
     margin-left: 12px;
+    right: 0;
   }
 
   .product-slider-button.swiper-button-next svg {
@@ -4893,12 +4976,19 @@ span {
     display: grid;
   }
 
+  .product-about {
+    margin-bottom: 24px;
+  }
+
   .lising-hero .hero-sponsors {
     border-radius: 8px;
   }
 
   .lising-hero-wrapper {
     grid-template-columns: repeat(1, 1fr);
+    margin-right: -16px;
+    margin-left: -16px;
+    border-radius: 8px 8px 0 0;
   }
 
   .lising-hero-headline {
@@ -4914,6 +5004,7 @@ span {
   .lising-hero-image-holder {
     flex: auto;
     padding-top: 42.8571428571%;
+    border-radius: 0 0 8px 8px;
   }
 
   .instruction-steps {
@@ -4957,6 +5048,10 @@ span {
     grid-row: 2;
   }
 
+  .service .help {
+    margin-bottom: 40px;
+  }
+
   .service-title {
     font-size: 32px;
     margin-bottom: 8px;
@@ -4969,6 +5064,15 @@ span {
   .services-features-list {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
+  }
+
+  .service-routes-title {
+    margin-bottom: 6px;
+  }
+
+  .service-cons {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
   }
 
   .news-feed {
@@ -4998,14 +5102,46 @@ span {
     margin-bottom: 16px;
   }
 
+  .buy-list {
+    gap: 16px;
+  }
+
+  .buy-container {
+    margin-bottom: 16px;
+  }
+
   .desktop-hidden {
     display: flex;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .middle-wrapper {
+    margin-top: 8px;
+  }
+
+  .title--l {
+    margin-bottom: 24px;
+  }
+
+  .middle-wrapper .title--l {
+    margin-bottom: 16px;
+  }
+
+  .title-holder {
+    margin-bottom: 16px;
+  }
+
+  .title-holder .title {
+    margin-right: 14px;
+  }
+
   .header {
     padding: 16px;
+  }
+
+  .hero-slider.contacts-slider {
+    margin-top: 16px;
   }
 
   .hero-slider .swiper-slide {
@@ -5014,6 +5150,10 @@ span {
 
   .featured-cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .featured-cards .card:not(:first-child) {
+    display: none;
   }
 
   .card .card-content-holder .card-content-row-name,
@@ -5091,6 +5231,10 @@ span {
     height: 6px;
   }
 
+  .info-wrapper {
+    gap: 16px;
+  }
+
   .help-wrapper {
     display: flex;
     flex-direction: column;
@@ -5108,6 +5252,10 @@ span {
     bottom: 0;
     width: 180px;
     height: 290px;
+  }
+
+  .news-count {
+    font-size: 14px;
   }
 
   .news-cards {
@@ -5163,7 +5311,11 @@ span {
     margin-bottom: -20px;
   }
 
-  .breadcrumbs-item {
+  .breadcrumbs {
+    padding-bottom: 16px;
+  }
+
+  .breadcrumbs-item:not(:last-child) {
     margin-bottom: 8px;
   }
 
@@ -5228,6 +5380,10 @@ span {
 
   .catalog-filter-mobile {
     width: 100%;
+  }
+
+  .catalog-list {
+    overflow-x: hidden;
   }
 
   .catalog-list-wrapper {
@@ -5351,10 +5507,6 @@ span {
     margin-bottom: 24px;
   }
 
-  .lising-hero-headline {
-    margin: 0 -16px;
-  }
-
   .lising-hero-image-holder {
     padding-top: 66.6666666667%;
   }
@@ -5365,6 +5517,10 @@ span {
 
   .lising-advantages-list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service .help {
+    margin-bottom: 40px;
   }
 
   .service-info-wrapper {
@@ -5386,8 +5542,58 @@ span {
     padding: 0;
   }
 
+  .service-routes-title {
+    margin-bottom: 16px;
+  }
+
+  .service-tabs {
+    margin-bottom: 24px;
+  }
+
+  .service-regions {
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 14px;
+  }
+
+  .service-regions-tab {
+    flex-shrink: 0;
+  }
+
+  .service-region-cities {
+    overflow-x: auto;
+  }
+
+  .service-region-city {
+    flex-shrink: 0;
+  }
+
+  .city-wrapper {
+    flex-direction: column;
+  }
+
+  .city-wrapper .contacts-block {
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 0;
+  }
+
+  .city-wrapper .contacts-block:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .service-cons {
+    gap: 16px;
+  }
+
   .news-feed {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .news-feed .news-card {
+    width: 100%;
   }
 
   .news-navigation {
@@ -5406,8 +5612,18 @@ span {
     width: 100%;
   }
 
+  .contacts .title {
+    margin-bottom: 16px;
+  }
+
+  .contacts-block {
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
   .contacts-slider {
-    margin: 36px -16px 0;
+    margin: 16px -16px 0;
   }
 
   .contacts-slider .swiper-button-prev {
@@ -5425,11 +5641,16 @@ span {
 
   .buy-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
   .buy-list-item {
     min-width: auto;
     height: 80px;
+  }
+
+  .buy-container {
+    margin-bottom: 16px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

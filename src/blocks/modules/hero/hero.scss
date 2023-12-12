@@ -7,6 +7,10 @@
   margin-top: 36px;
 
   &.contacts-slider {
+    @include media-breakpoint-down(phone) {
+      margin-top: 16px;
+    }
+
     margin-top: 24px;
   }
 
@@ -19,7 +23,7 @@
       padding: 40px 35px 260px 30px;
     }
 
-    padding: 80px 65% 80px 80px;
+    padding: 80px 50% 80px 80px;
   }
 
   .swiper-pagination {
@@ -65,5 +69,13 @@
 }
 
 .contacts-button {
-  border: 1px solid transparent;
+  &:hover {
+    color: $green-600;
+    background: $white;
+    border: 1px solid $black;
+
+    &::after, &::before {
+      opacity: 0;
+    }
+  }
 }

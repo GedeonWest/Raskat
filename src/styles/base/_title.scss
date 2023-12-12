@@ -29,6 +29,14 @@
       font-size: 24px;
       line-height: 1.3em;
     }
+
+    @include media-breakpoint-down(phone) {
+      margin-bottom: 24px;
+
+      .middle-wrapper & {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &--sm {
@@ -58,8 +66,16 @@
   align-items: center;
   margin-bottom: 32px;
 
+  @include media-breakpoint-down(phone) {
+    margin-bottom: 16px;
+  }
+
   .title {
     margin-right: 16px;
     margin-bottom: 0;
+
+    @include media-breakpoint-down(phone) {
+      margin-right: 14px;
+    }
   }
 }

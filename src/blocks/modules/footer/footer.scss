@@ -9,7 +9,6 @@
 
 .footer-top {
   @include media-breakpoint-down(desktop) {
-    flex-direction: column;
     padding: 32px 24px;
   }
 
@@ -30,7 +29,7 @@
 
 .footer-logo {
   @include media-breakpoint-down(tablet) {
-    width: auto;
+    width: 172px;
     height: 40px;
     margin-bottom: 16px;
   }
@@ -91,6 +90,12 @@
     }
 
     margin-bottom: 16px;
+  }
+}
+
+.footer-contacts {
+  @include media-breakpoint-down(desktop) {
+    min-width: 312px;
   }
 }
 

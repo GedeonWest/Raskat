@@ -13,15 +13,13 @@
 
 .news-main-title {
   display: block;
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &:hover {
-    color: $green-600;
-  }
 }
 
 .news-count {
+  @include media-breakpoint-down(phone) {
+    font-size: 14px;
+  }
+
   font-size: 20px;
   color: $gray-400;
 }
@@ -60,6 +58,9 @@
 }
 
 .news-card-title {
+  display: block;
+  text-decoration: none;
+
   .news-card:hover & {
     color: $green;
   }
