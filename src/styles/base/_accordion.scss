@@ -1,7 +1,7 @@
 .accordion {
   border-radius: 8px;
   background-color: $white;
-  padding: 16px 24px 0;
+  padding: 0 24px;
 
   &:not(:last-child) {
     margin-bottom: 24px;
@@ -18,7 +18,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 16px;
+  padding: 16px 0;
+  cursor: pointer;
 
   %accordion--active & {
     border-bottom: 1px solid $gray-300;

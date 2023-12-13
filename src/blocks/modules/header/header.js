@@ -3,7 +3,7 @@ let menu;
 let button;
 let catalogButton;
 let headerCatalog;
-let headerNavList;
+// let headerNavList;
 let catalogTrigers;
 let windowWidth;
 let buttonBack;
@@ -17,7 +17,7 @@ const findElements = () => {
     burger = document.querySelector(".header-burger");
     headerCatalog = document.querySelector("#headerCatalog");
     catalogButton = document.querySelector("#catalogLink");
-    headerNavList = document.querySelector(".header-navigation-list");
+    // headerNavList = document.querySelector(".header-navigation-list");
     catalogTrigers = document.querySelectorAll(".catalog-trigger");
     buttonBack = document.querySelector(".header-catalog-back");
 };
@@ -34,24 +34,27 @@ const toggleBudy = () => {
 function closeCatalogMenu() {
     headerCatalog.classList.remove(activeClass);
     document.querySelector("body").classList.remove("body--stuck");
+    document.querySelector("body").classList.remove("body--catalog-open");
+    window.removeEventListener("click", detectOutsideClick);
 }
 
 const handleBackButtonClick = () => {
     headerCatalog.classList.remove(activeClass);
 };
 
-const detectOutsideClick = (e) => {
+function detectOutsideClick(e) {
     if (!headerCatalog.contains(e.target) && e.target !== catalogButton) {
         closeCatalogMenu();
     }
-};
+}
 
 const toggleCatalogMenu = () => {
     headerCatalog.classList.add(activeClass);
     document.querySelector("body").classList.add("body--stuck");
+    document.querySelector("body").classList.add("body--catalog-open");
 
     if (windowWidth > 1025) {
-        window.addEventListener("click", (e) => detectOutsideClick(e));
+        window.addEventListener("click", detectOutsideClick);
     }
 };
 
@@ -62,16 +65,16 @@ const onButtonClick = () => {
     closeCatalogMenu();
 };
 
-function activeLink() {
-    let path = document.location.href;
-    let links = headerNavList.getElementsByTagName("a");
-    for (let i = links.length - 1; i >= 0; i--) {
-        if (path.indexOf(links[i].href) != -1) {
-            links[i].classList.add("link--active");
-            break;
-        }
-    }
-}
+// function activeLink() {
+//     let path = document.location.href;
+//     let links = headerNavList.getElementsByTagName("a");
+//     for (let i = links.length - 1; i >= 0; i--) {
+//         if (path.indexOf(links[i].href) != -1) {
+//             links[i].classList.add("link--active");
+//             break;
+//         }
+//     }
+// }
 
 const subscribe = () => {
     if (burger) {
@@ -92,7 +95,7 @@ const subscribe = () => {
         buttonBack.addEventListener("click", () => handleBackButtonClick());
     }
 
-    window.onload = activeLink;
+    // window.onload = activeLink;
     window.addEventListener("resize", updateSize);
 };
 

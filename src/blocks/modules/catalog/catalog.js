@@ -16,6 +16,7 @@ const stuckBudy = () => {
 
 const unStuckBudy = () => {
     document.querySelector("body").classList.remove("body--stuck");
+    window.removeEventListener("click", detectOutsideClick);
 };
 
 const hideFilters = () => {
@@ -23,17 +24,17 @@ const hideFilters = () => {
     unStuckBudy();
 };
 
-const detectOutsideClick = (e) => {
+function detectOutsideClick(e) {
     console.log(e.target);
     if (!filterHolder.contains(e.target) && e.target !== filterToggler) {
         hideFilters();
     }
-};
+}
 
 const openFilters = () => {
     filterHolder.classList.add("catalog-filter-mobile--open");
     stuckBudy();
-    window.addEventListener("click", (e) => detectOutsideClick(e));
+    window.addEventListener("click", detectOutsideClick);
 };
 
   

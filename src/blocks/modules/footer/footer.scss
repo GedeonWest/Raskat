@@ -58,11 +58,15 @@
 }
 
 .footer-nav-item {
+  @include media-breakpoint-down(tablet) {
+    width: fit-content;
+  }
+
   @include media-breakpoint-down(phone) {
     width: fit-content;
   }
 
-  width: 200px;
+  width: 230px;
   color: $white;
 
   .footer-contacts & {
@@ -116,8 +120,12 @@
 }
 
 .footer-bottom {
+  @include media-breakpoint-down(desktop) {
+    padding: 32px 24px;
+  }
+
   @include media-breakpoint-down(tablet) {
-    padding: 16px $tablet-gap;
+    padding: 16px 24px;
   }
 
   @include media-breakpoint-down(phone) {

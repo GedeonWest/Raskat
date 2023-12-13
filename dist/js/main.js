@@ -23,23 +23,22 @@ var stuckBudy = function stuckBudy() {
 };
 var unStuckBudy = function unStuckBudy() {
   document.querySelector("body").classList.remove("body--stuck");
+  window.removeEventListener("click", detectOutsideClick);
 };
 var hideFilters = function hideFilters() {
   filterHolder.classList.remove("catalog-filter-mobile--open");
   unStuckBudy();
 };
-var detectOutsideClick = function detectOutsideClick(e) {
+function detectOutsideClick(e) {
   console.log(e.target);
   if (!filterHolder.contains(e.target) && e.target !== filterToggler) {
     hideFilters();
   }
-};
+}
 var openFilters = function openFilters() {
   filterHolder.classList.add("catalog-filter-mobile--open");
   stuckBudy();
-  window.addEventListener("click", function (e) {
-    return detectOutsideClick(e);
-  });
+  window.addEventListener("click", detectOutsideClick);
 };
 var onCloseClick = function onCloseClick() {
   hideFilters();
@@ -120,7 +119,7 @@ var menu;
 var button;
 var catalogButton;
 var headerCatalog;
-var headerNavList;
+// let headerNavList;
 var catalogTrigers;
 var windowWidth;
 var buttonBack;
@@ -132,7 +131,7 @@ var findElements = function findElements() {
   burger = document.querySelector(".header-burger");
   headerCatalog = document.querySelector("#headerCatalog");
   catalogButton = document.querySelector("#catalogLink");
-  headerNavList = document.querySelector(".header-navigation-list");
+  // headerNavList = document.querySelector(".header-navigation-list");
   catalogTrigers = document.querySelectorAll(".catalog-trigger");
   buttonBack = document.querySelector(".header-catalog-back");
 };
@@ -146,22 +145,23 @@ var toggleBudy = function toggleBudy() {
 function closeCatalogMenu() {
   headerCatalog.classList.remove(activeClass);
   document.querySelector("body").classList.remove("body--stuck");
+  document.querySelector("body").classList.remove("body--catalog-open");
+  window.removeEventListener("click", detectOutsideClick);
 }
 var handleBackButtonClick = function handleBackButtonClick() {
   headerCatalog.classList.remove(activeClass);
 };
-var detectOutsideClick = function detectOutsideClick(e) {
+function detectOutsideClick(e) {
   if (!headerCatalog.contains(e.target) && e.target !== catalogButton) {
     closeCatalogMenu();
   }
-};
+}
 var toggleCatalogMenu = function toggleCatalogMenu() {
   headerCatalog.classList.add(activeClass);
   document.querySelector("body").classList.add("body--stuck");
+  document.querySelector("body").classList.add("body--catalog-open");
   if (windowWidth > 1025) {
-    window.addEventListener("click", function (e) {
-      return detectOutsideClick(e);
-    });
+    window.addEventListener("click", detectOutsideClick);
   }
 };
 var onButtonClick = function onButtonClick() {
@@ -170,16 +170,18 @@ var onButtonClick = function onButtonClick() {
   menu.classList.toggle("header-mobile--show");
   closeCatalogMenu();
 };
-function activeLink() {
-  var path = document.location.href;
-  var links = headerNavList.getElementsByTagName("a");
-  for (var i = links.length - 1; i >= 0; i--) {
-    if (path.indexOf(links[i].href) != -1) {
-      links[i].classList.add("link--active");
-      break;
-    }
-  }
-}
+
+// function activeLink() {
+//     let path = document.location.href;
+//     let links = headerNavList.getElementsByTagName("a");
+//     for (let i = links.length - 1; i >= 0; i--) {
+//         if (path.indexOf(links[i].href) != -1) {
+//             links[i].classList.add("link--active");
+//             break;
+//         }
+//     }
+// }
+
 var subscribe = function subscribe() {
   if (burger) {
     burger.addEventListener("click", function () {
@@ -203,7 +205,8 @@ var subscribe = function subscribe() {
       return handleBackButtonClick();
     });
   }
-  window.onload = activeLink;
+
+  // window.onload = activeLink;
   window.addEventListener("resize", updateSize);
 };
 function init() {
