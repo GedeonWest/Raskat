@@ -278,10 +278,6 @@
     border: 0;
     cursor: pointer;
     padding: 0;
-
-    %page-dark & {
-      color: $white;
-    }
   }
 }
 
@@ -310,6 +306,10 @@
     height: 16px;
     margin-right: 16px;
   }
+
+  %page-dark & {
+    color: $white;
+  }
 }
 
 .catalog-sort-button {
@@ -320,10 +320,23 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+  %page-dark & {
+    color: $white;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   &--active {
     color: $black-400;
+    opacity: 1;
     font-weight: 500;
+
+    %page-dark & {
+      opacity: 1;
+    }
   }
 }
 

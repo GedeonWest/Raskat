@@ -15,8 +15,21 @@
   background-color: $white;
 
   %page-dark & {
+    overflow: hidden;
     background-color: $black-300;
     border: none;
+
+    &::before {
+      @include pseudo;
+
+      top: 0;
+      left: 0;
+      filter: blur(82px);
+      background-color: $white;
+      opacity: 0.3;
+      width: 15%;
+      height: 100%;
+    }
   }
 }
 
@@ -37,6 +50,14 @@
   padding-top: 100%;
   border-radius: 8px;
   overflow: hidden;
+
+  %page-dark & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    max-height: 100%;
+  }
 }
 
 .card-row-image {
@@ -46,6 +67,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  %page-dark & {
+    position: relative;
+    max-width: 130px;
+    max-height: 90px;
+  }
 }
 
 .card-row-content {
@@ -140,6 +167,10 @@
     height: 2px;
     background-image: url("../../../img/dots.svg");
     background-repeat: repeat;
+
+    %page-dark & {
+      display: none;
+    }
   }
 
   &-name, &-value {
@@ -152,7 +183,7 @@
     font-size: 14px;
 
     %page-dark & {
-      background-color: $black-300;
+      background-color: transparent;
     }
   }
 
@@ -229,5 +260,17 @@
     background-color: transparent;
     border: 1px solid $green-300;
     border-radius: 8px 8px 8px 0;
+  }
+}
+
+.card-decorate {
+  flex: 1;
+  align-self: flex-end;
+  height: 1px;
+  border-bottom: 1px dashed #d9d9d9;
+  margin-bottom: 4px;
+
+  %page-dark & {
+    border-bottom: 1px dashed rgba($color: $white, $alpha: 20%);
   }
 }

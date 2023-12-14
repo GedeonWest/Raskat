@@ -18,7 +18,7 @@
   border-bottom: 1px solid rgba($color: $white, $alpha: 10%);
 
   %page-dark & {
-    background-color: #000;
+    background-color: transparent;
   }
 }
 
@@ -57,16 +57,27 @@
   padding: 48px 0 48px 48px;
 
   %page-dark & {
+    @include media-breakpoint-down(desktop) {
+      background-image: url("../../../img/request-dark-bg-mob.png");
+    }
+
     @include media-breakpoint-down(tablet) {
+      background-image: none;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: 40px;
       padding-bottom: 0;
+      padding-right: 24px;
     }
 
     @include media-breakpoint-down(phone) {
       grid-template-rows: unset;
+      background-image: url("../../../img/request-dark-bg-phone.png");
+      grid-template-columns: 3fr 1fr;
     }
+
+    background-image: url("../../../img/request-dark-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -134,8 +145,10 @@
 
   %page-dark & {
     @include media-breakpoint-down(tablet) {
+      display: block;
       grid-column: 2;
       grid-row: 1 / span 2;
+      position: relative;
       width: 250px;
       height: 220px;
       background-image: url("../../../img/request-dark-mob.png");
@@ -143,6 +156,7 @@
     }
 
     @include media-breakpoint-down(phone) {
+      display: none;
       grid-row: 2;
       width: 170px;
       height: 140px;
@@ -150,8 +164,9 @@
       margin-bottom: -20px;
     }
 
-    background-image: url("../../../img/request-dark.png");
+    display: none;
     width: 320px;
+    background-image: url("../../../img/request-dark.png");
     margin-left: auto;
   }
 }

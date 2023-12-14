@@ -5,11 +5,11 @@
       font-size: 16px;
     }
 
-    background-color: $gray-200;
+    // background-color: $gray-200;
 
-    %page-dark & {
-      background-color: #000;
-    }
+    // %page-dark & {
+    //   background-color: #000;
+    // }
   }
 }
 
@@ -122,6 +122,10 @@
   .swiper-container {
     border: 1px solid $gray-300;
     border-radius: 8px;
+
+    %page-dark & {
+      border: 0;
+    }
   }
 
   .swiper-wrapper {
@@ -472,6 +476,10 @@
       left: 0;
       height: 2px;
       background-color: $green;
+
+      %page-dark & {
+        background: linear-gradient(180deg, $green-100 -0.02%, $green-600 100.02%);
+      }
     }
   }
 }

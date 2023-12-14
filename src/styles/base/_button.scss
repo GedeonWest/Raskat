@@ -182,6 +182,10 @@
   flex-shrink: 0;
   padding: 0;
 
+  %page-dark & {
+    color: $white;
+  }
+
   svg {
     width: 24px;
     height: 24px;

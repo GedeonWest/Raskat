@@ -25,6 +25,7 @@
   %page-dark & {
     background-color: transparent;
     position: relative;
+    border-color: rgba($color: $white, $alpha: 10%);
   }
 
   %page-dark.body--stuck & {
@@ -131,7 +132,7 @@
 
   %page-dark & {
     color: $white;
-    border: double 4px transparent;
+    border: double 2px transparent;
     border-radius: 8px 8px 8px 0;
     background-image: linear-gradient(#000, #000), radial-gradient(circle at top left, #00d344, #009482);
     background-origin: border-box;
@@ -274,15 +275,23 @@
   z-index: 1001;
   right: 0;
   left: 0;
+  max-height: 0;
+  overflow: hidden;
   padding: 36px 60px;
-  transform: translateY(-100%);
-  transition: all 0.3s;
+
+  // transform: translateY(-83px);
+  transition: all 0.4s ease-out;
   background-color: $white;
   opacity: 0;
   pointer-events: none;
 
   &--active {
-    transform: translateY(0);
+    @include media-breakpoint-down(tablet) {
+      max-height: calc(100vh - 57px) !important;
+      transition: none;
+    }
+
+    // transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
@@ -295,17 +304,23 @@
 .header-catalog-content {
   @include media-breakpoint-down(tablet) {
     grid-template-columns: repeat(2, 1fr);
-    flex: 1;
+    row-gap: 32px;
   }
 
   @include media-breakpoint-down(phone) {
-    grid-template-columns: repeat(1, 1fr);
+    flex: 1;
     overflow: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  opacity: 0;
+
+  .header-catalog-menu--active & {
+    opacity: 1;
+  }
 }
 
 .header-catalog-list {
@@ -356,6 +371,7 @@
 .header-catalog-back {
   @include media-breakpoint-down(tablet) {
     display: flex;
+    margin-top: auto;
   }
 
   display: none;

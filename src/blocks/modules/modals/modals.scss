@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 /* stylelint-disable plugin/selector-bem-pattern */
 .modal {
   @include media-breakpoint-down(phone) {
@@ -15,6 +16,10 @@
 
   &.is-open {
     display: flex;
+  }
+
+  %page-dark & {
+    background-color: rgba($color: #000, $alpha: 80%);
   }
 }
 
@@ -100,6 +105,10 @@
   line-height: 1.1em;
   margin-bottom: 12px;
   margin-top: 0;
+
+  %page-dark & {
+    color: $white;
+  }
 }
 
 .success-text {
@@ -109,6 +118,10 @@
   font-weight: 400;
   line-height: 1.3em;
   margin: 0 0 24px;
+
+  %page-dark & {
+    color: $white;
+  }
 }
 
 .success-icon {
@@ -121,4 +134,15 @@
   border-radius: 100%;
   background-color: $green;
   margin-bottom: 16px;
+}
+
+.success-close.button--black {
+  %page-dark & {
+    color: $white;
+    border: double 2px transparent;
+    border-radius: 8px 8px 8px 0;
+    background-image: linear-gradient($black-300, $black-300), radial-gradient(circle at top left, #00d344, #009482);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
 }

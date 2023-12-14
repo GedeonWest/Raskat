@@ -24,6 +24,7 @@ const findElements = () => {
 
 function updateSize() {
     windowWidth = window.innerWidth;
+    console.log(windowWidth);
 }
 
 const toggleBudy = () => {
@@ -33,9 +34,13 @@ const toggleBudy = () => {
 
 function closeCatalogMenu() {
     headerCatalog.classList.remove(activeClass);
+    if (headerCatalog.style.maxHeight) {
+        headerCatalog.style.maxHeight = null;
+    }
     document.querySelector("body").classList.remove("body--stuck");
     document.querySelector("body").classList.remove("body--catalog-open");
     window.removeEventListener("click", detectOutsideClick);
+    console.log("ya ya");
 }
 
 const handleBackButtonClick = () => {
@@ -52,6 +57,7 @@ const toggleCatalogMenu = () => {
     headerCatalog.classList.add(activeClass);
     document.querySelector("body").classList.add("body--stuck");
     document.querySelector("body").classList.add("body--catalog-open");
+    headerCatalog.style.maxHeight = headerCatalog.scrollHeight + "px";
 
     if (windowWidth > 1025) {
         window.addEventListener("click", detectOutsideClick);
@@ -62,7 +68,9 @@ const onButtonClick = () => {
     toggleBudy();
     burger.classList.toggle("header-burger--close");
     menu.classList.toggle("header-mobile--show");
-    closeCatalogMenu();
+    if (headerCatalog.classList.contains(activeClass)) {
+        closeCatalogMenu();
+    }
 };
 
 // function activeLink() {
