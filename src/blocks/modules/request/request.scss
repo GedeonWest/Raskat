@@ -65,6 +65,7 @@
       background-image: none;
       display: grid;
       grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto 100px;
       padding-bottom: 0;
       padding-right: 24px;
     }
@@ -86,6 +87,10 @@
   margin-bottom: 16px;
 
   %page-dark & {
+    @include media-breakpoint-down(tablet) {
+      margin-bottom: 8px;
+    }
+
     @include media-breakpoint-down(phone) {
       grid-column: 1 / span 2;
     }
@@ -106,6 +111,10 @@
 
   @include media-breakpoint-down(phone) {
     margin-bottom: 0;
+
+    %page-dark & {
+      padding-bottom: 20px;
+    }
   }
 
   font-size: 20px;

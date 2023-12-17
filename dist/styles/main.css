@@ -2910,13 +2910,21 @@ span {
   margin-bottom: 16px;
 }
 
+.page--dark .success-icon {
+  background: linear-gradient(180deg, #00d344 -0.02%, #009482 100.02%);
+}
+
 .page--dark .success-close.button--black {
   color: #ffffff;
   border: double 2px transparent;
   border-radius: 8px 8px 8px 0;
-  background-image: linear-gradient(#181818, #181818), radial-gradient(circle at top left, #00d344, #009482);
+  background-image: linear-gradient(#181818, #181818), radial-gradient(circle at top left, #009482, #009482);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+.page--dark .success-close.button--black:hover {
+  background-image: linear-gradient(180deg, #00d344 -0.02%, #009482 100.02%);
 }
 
 .catalog-count {
@@ -4920,8 +4928,13 @@ span {
     background-image: none;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 100px;
     padding-bottom: 0;
     padding-right: 24px;
+  }
+
+  .page--dark .request-title {
+    margin-bottom: 8px;
   }
 
   .request-description {
@@ -5430,6 +5443,10 @@ span {
 
   .request-description {
     margin-bottom: 0;
+  }
+
+  .page--dark .request-description {
+    padding-bottom: 20px;
   }
 
   .request-image {

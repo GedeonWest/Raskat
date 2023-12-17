@@ -134,6 +134,10 @@
   border-radius: 100%;
   background-color: $green;
   margin-bottom: 16px;
+
+  %page-dark & {
+    background: linear-gradient(180deg, #00d344 -0.02%, #009482 100.02%);
+  }
 }
 
 .success-close.button--black {
@@ -141,8 +145,12 @@
     color: $white;
     border: double 2px transparent;
     border-radius: 8px 8px 8px 0;
-    background-image: linear-gradient($black-300, $black-300), radial-gradient(circle at top left, #00d344, #009482);
+    background-image: linear-gradient($black-300, $black-300), radial-gradient(circle at top left, $green, $green);
     background-origin: border-box;
     background-clip: padding-box, border-box;
+
+    &:hover {
+      background-image: linear-gradient(180deg, #00d344 -0.02%, #009482 100.02%);
+    }
   }
 }
